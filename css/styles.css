@@ -1,0 +1,263 @@
+/* =========================
+   Estilos (en español) - styles.css
+   Ordenado "uno por uno" y documentado
+   ========================= */
+
+/* ======================================================================
+   1) VARIABLES: colores, tipografías y medidas (ajusta aquí en un solo lugar)
+   ====================================================================== */
+:root {
+  /* Tipografía */
+  --fuente-principal: system-ui, -apple-system, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+
+  /* Colores */
+  --color-fondo: #ffffff;
+  --color-texto: #222222;
+  --color-primario: #e6e6e6;
+  --color-primario-oscuro: #bfbfbf;
+  --color-acento: #e9f1ff;
+
+  /* Espaciado y medidas */
+  --ancho-max: 1100px;
+  --espacio: 20px;
+  --radio-boton: 4px;
+  --bp-movil: 768px;
+}
+
+/* ======================================================================
+   2) RESET / BASE
+   ====================================================================== */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--fuente-principal);
+  background: var(--color-fondo);
+  color: var(--color-texto);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ======================================================================
+   3) CABECERA: logo y buscador
+   ====================================================================== */
+.cabecera {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: calc(var(--espacio) * 1) calc(var(--espacio) * 2);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.logo img {
+  width: 150px;
+  height: auto;
+  display: block;
+}
+
+.marca {
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.tagline {
+  font-size: 14px;
+  color: #666;
+}
+
+/* --- Buscador --- */
+.buscador {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.buscador input {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: var(--radio-boton);
+  width: 220px;
+}
+
+.buscador button {
+  border: none;
+  background: var(--color-acento);
+  padding: 8px 12px;
+  border-radius: var(--radio-boton);
+  cursor: pointer;
+}
+
+/* ======================================================================
+   4) NAVEGACIÓN PRINCIPAL
+   ====================================================================== */
+nav {
+  display: flex;
+  justify-content: center;
+  padding: 12px 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  display: inline-block;
+  padding: 10px 26px;
+  background: var(--color-primario);
+  border: 1px solid var(--color-primario-oscuro);
+  border-radius: 4px;
+  text-decoration: none;
+  color: #000;
+  box-shadow: inset 0 -4px 0 rgba(0,0,0,0.08);
+}
+
+nav a:hover {
+  background: #dcdcdc;
+}
+
+/* ======================================================================
+   5) CONTENEDOR PRINCIPAL
+   ====================================================================== */
+.principal {
+  max-width: var(--ancho-max);
+  margin: calc(var(--espacio) * 1.5) auto;
+  padding: 0 20px;
+}
+
+/* ======================================================================
+   6) SECCIÓN DESTACADAS (dos columnas de imágenes grandes)
+   ====================================================================== */
+.destacadas {
+  display: flex;
+  gap: 30px;
+  align-items: stretch;
+}
+
+.tarjeta {
+  flex: 1;
+  background: #fff;
+  border: 4px solid #cfcfcf;
+  padding: 12px;
+  box-shadow: 0 2px 0 rgba(0,0,0,0.15);
+}
+
+.tarjeta img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Contenedor interior para la miniatura superpuesta */
+.vista {
+  position: relative;
+}
+
+.miniatura-peque {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  border: 2px solid #fff;
+  width: 72px;
+  height: 72px;
+  overflow: hidden;
+}
+
+.miniatura-peque img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ======================================================================
+   7) TÍTULO CENTRADO (etiqueta con borde)
+   ====================================================================== */
+.titulo-centro {
+  text-align: center;
+  margin: 32px 0;
+}
+
+.titulo-centro h2 {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 3px solid #000;
+  background: #dedede;
+  font-weight: 700;
+}
+
+/* ======================================================================
+   8) FILA DE MINIATURAS
+   ====================================================================== */
+.fila-miniaturas {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 18px;
+  justify-content: center;
+}
+.fila-miniaturas2 {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 18px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.miniatura {
+  width: 120px;
+  height: 80px;
+  border: 1px solid #ddd;
+  overflow: hidden;
+}
+
+.miniatura img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ======================================================================
+   9) RESPONSIVE (móvil)
+   ====================================================================== */
+@media (max-width: 768px) {
+  .destacadas {
+    flex-direction: column;
+  }
+
+  .logo img {
+    width: 110px;
+  }
+
+  .buscador input {
+    width: 140px;
+  }
+
+  .miniatura {
+    width: 80px;
+    height: 60px;
+  }
+}
+
+/* ======================================================================
+   10) UTILIDADES (pequeños helpers para uso futuro)
+   ====================================================================== */
+.u-text-center { text-align: center; }
+.u-hidden { display: none; }
+
+/* === FIN del archivo === */
+
