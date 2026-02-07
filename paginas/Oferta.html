@@ -8,28 +8,230 @@
 <style>
     * {
         margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
     }
 
     body {
-        background-color: #f2f2f2;
-        color: #333;
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+        background: #f2f2f2;
     }
 
+    
     /*Header*/
     header {
         max-width: 1100px;
-      margin: 30px auto;
-      background-color: white;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      padding: 20px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        margin: 30px auto;
+        background-color: white;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
     }
+
+    .cabecera {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 40px;
+        background: white;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        position: relative; /* IMPORTANTE */
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .logo img {
+        width: 60px;
+    }
+    
+    .nav-principal ul {
+        display: flex;
+        gap: 20px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-principal a {
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+    }
+
+    .nav-principal a:hover {
+        color: #e63946;
+    }
+
+    .buscador {
+        display: flex;
+        gap: 5px;
+    }
+
+    .buscador input {
+        padding: 6px 10px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+    }
+
+    .buscador button {
+        border: none;
+        background: #e63946;
+        color: white;
+        padding: 6px 10px;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+    /* ===== FONDO / HERO ===== */
+
+    .fondo {
+        position: relative;
+        width: 100%;
+        height: 90vh;
+        background: linear-gradient(160deg, #020412, #0a1030);
+        overflow: hidden;
+    }
+
+    .patron {
+        position: absolute;
+        inset: 0;
+        background-image: radial-gradient(#ffffff22 1px, transparent 1px);
+        background-size: 22px 22px;
+        z-index: 1;
+    }
+
+    .detalles {
+        position: absolute;
+        inset: 0;
+        background-image:
+            linear-gradient(120deg, transparent 85%, #ff2f9222 90%),
+            linear-gradient(-120deg, transparent 85%, #6b4bff22 90%);
+    }
+
+    .contenido {
+        position: relative;
+        z-index: 1;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+    }
+
+    .contenido h1 {
+        font-size: 3rem;
+    }
+
+    .contenido p {
+        margin-top: 10px;
+        opacity: 0.85;
+    }
+
+    .fondo {
+        margin: 0;
+        min-height: 100vh;
+        background: #0f172a; /* fondo oscuro */
+        overflow: hidden; /* para que no salga scroll */
+        position: relative;
+    }
+
+    .detalles {
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+    }    
+
+    .patron {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+    }
+
+
+
+    .pildoras {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        inset: 0;
+        z-index: 3; /* queda detrás del contenido */
+        pointer-events: none;
+    }
+
+    .pildoras span {
+        position: absolute;
+        bottom: -100px;
+        width: 30px;
+        height: 60px;
+        background: linear-gradient(red, darkred);
+        border-radius: 50px;
+        animation: subir 10s linear infinite;
+        opacity: 0.8;
+    }
+
+    .contenido {
+        position: relative;
+        z-index: 4;
+    }
+
+    @keyframes subir {
+        0% {
+            transform: translateY(0) rotate(0deg);
+            opacity: 0;
+        }
+        50% {
+            opacity: 0.8;
+        }
+        100% {
+            transform: translateY(-110vh) rotate(360deg);
+            opacity: 0;
+        }
+    }
+
+    .pildoras span:nth-child(1) {
+        left: 10%;
+        animation-duration: 12s;
+    }
+
+    .pildoras span:nth-child(2) {
+        left: 30%;
+        width: 20px;
+        height: 40px;
+        animation-duration: 8s;
+    }
+
+    .pildoras span:nth-child(3) {
+        left: 50%;
+        animation-duration: 15s;
+    }
+
+    .pildoras span:nth-child(4) {
+        left: 70%;
+        width: 25px;
+        height: 50px;
+        animation-duration: 10s;
+    }
+
+    .pildoras span:nth-child(5) {
+        left: 90%;
+        animation-duration: 18s;
+    }
+
 
     header img {
         width: 80px;
@@ -61,31 +263,53 @@
 
     /*Estilo de Diseño Numero 1*/
 
+    .productos {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto; /* centra todo */
+        padding: 40px;
+    }
+    
+    /* Quinta card: centro-izquierda */
+    .cardss:nth-child(5) {
+        grid-column: 2;
+    }
+
+    /* Sexta card: centro-derecha */
+    .cardss:nth-child(6) {
+        grid-column: 3;
+    }
+
+
+
     .ofertas-simples .cards {
         display: flex;
         gap: 20px;
         justify-content: center;
     }
 
-    .card {
-        background: #fff;
-        width: 220px;
-        /* Define el ancho fijo del elemento (tarjeta) */
-        padding: 15px;
-        /* Espacio interno entre el borde y el contenido */
-        border-radius: 12px;
-        /* Redondea las esquinas del contenedor */
-        text-align: center;
-        position: relative;
-        /* Permite posicionar elementos hijos con position: absolute */
-        box-shadow: 0 4px 10px rgba(0,0,0,.1);
-        /* Agrega una sombra suave para dar efecto de elevación */
+    .productos {
+        margin-top: 40px;
     }
 
-    .card img {
+    .cardss {
+        background: #fff;
+        border-radius: 12px;
+        padding: 15px;
+        text-align: center;
+        position: relative;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .productos .cardss img {
         width: 100%;
-        height: 140px;
+        height: 150px;
+        max-height: 150px;
         object-fit: contain;
+        display: block;
+        margin-bottom: 0 auto 10px;
     }
 
     .descuento {
@@ -101,7 +325,7 @@
         border-radius: 8px;
     }
 
-    .card button {
+    .productos .cardss button {
         background: black;
         color: white;
         border: none;
@@ -110,114 +334,62 @@
         border-radius: 6px;
     }
 
-    /*Estilo de Diseño Numero 2*/
-
-    .ofertas-dia {
-        display: grid;
-        /* Activa el sistema Grid para organizar los elementos en filas y columnas
-        grid ayuda a organizar todo en columnas o filas */
-        grid-template-columns: 1fr;
-        /* Crea dos columnas del mismo tamaño (1fr = una fracción del espacio disponible) */
-        gap: 20px;
-        padding: 40px;
-    }
-
-    .banner {
-        background: linear-gradient(135deg, #111, #333);
-        color: white;
-        padding: 40px;
-        border-radius: 15px;
-    }
-
-    .banner button {
-        margin-top: 20px;
-        /* Agrega un espacio externo de por ejemplo 20px en la parte superior del elemento */
-        background: orange;
-        border: none;
-        padding: 12px 25px;
-        border-radius: 8px;
-    }
-
-    .productos {
-        display: flex;
-        gap: 20px;
-    }
-
-    .producto {
-        background: #f2f2f2;
-        padding: 15px;
-        border-radius: 12px;
-        text-align: center;
-    }
-
-    .producto img {
-        width: 100%;
-        height: 120px;
-        object-fit: contain;
-    }
-
-    /*Estilo de Diseño Numero 3*/
-
-    .sale-moderno {
-        padding: 40px;
-    }
-
-    .productos-sale {
-        display: flex;
-        gap: 20px;
-        justify-content: center;
-    }
-
-    .producto-sale {
-        position: relative;
-        overflow: hidden;
-        /* Oculta cualquier contenido que se salga del tamaño del contenedor */
-        border-radius: 15px;
-    }
-
-    .producto-sale img {
-        width: 240px;
-        object-fit: cover;
-    }
-
-    .producto-sale:hover img {
-        transform: scale(1.1);
-        /* Aumenta el tamaño del elemento al 110% de su tamaño original */
-    }
-
-    .info {
-        position: absolute;
-        bottom: 0;
-        background: rgba(0,0,0,.7);
-        color: white;
-        width: 100%;
-        text-align: center;
-        padding: 10px;
-    }
-
 </style>
 <body>
+
     <header class="cabecera">
         <div class="logo">
             <img src="../imagenes/logotabas.png" alt="Imagen no encontrada">
             <div>
                 <h1><b>Calzado.Shop</b></h1>
-                <p>Calzados de calidad para todas las personas</p>
+                <p class="slogan">Calzados de calidad para todas las personas</p>
             </div>
         </div>
+            <nav class="nav-principal">
+                <ul>
+                    <li><a href="#quienes">¿Quiénes somos?</a></li>
+                    <li><a href="#calzado">Calzado</a></li>
+                    <li><a href="#mujer">Mujer</a></li>
+                    <li><a href="#hombre">Hombre</a></li>
+                    <li><a href="#ofertas">Ofertas</a></li>
+                    <li><a href="#Proximos lanzamiento">Próximos Lanzamientos</a></li>
+                    <li><a href="#Tendencias">Tendencias</a></li>
+                </ul>
+            </nav>
+
         <div class="buscador">
             <input type="search" placeholder="Buscar">
             <button aria-label="Buscar">🔍</button>
         </div>
 
     </header>
+
+    <div class="fondo">
+        <div class="patron"></div>
+        <div class="detalles"></div>
+        <div class="pildoras">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+
+        <!-- CONTENIDO SOBRE EL FONDO -->
+        <div class="contenido">
+            <h1>Calzado Shop</h1>
+            <p>Ofertas especiales</p>
+        </div>
+    </div>
+
     <main class="principal">
         <!--Diseño numero 1-->
         <section class="ofertas-simples">
             <h2>🔥 Ofertas Imperdibles</h2>
 
-                <div class="cards">
-                    <article class="card">
+                <div class="productos">
+                    <article class="cardss">
                         <span class="descuento">-35%</span>
                         <img src="../imagenes/zap1.png">
                         <h3>Samba blancas</h3>
@@ -225,56 +397,46 @@
                         <button>Comprar</button>
                     </article>
 
-                    <article class="card">
-                        <span class="descuento">-20%</span>
+                    <article class="cardss">
+                        <span class="descuento">-35%</span>
                         <img src="../imagenes/zap2.png">
+                        <h3>Samba blancas</h3>
+                        <p><del>S/ 250</del> <strong>S/ 175</strong></p>
+                        <button>Comprar</button>
+                    </article>
+
+                    <article class="cardss">
+                        <span class="descuento">-35%</span>
+                        <img src="../imagenes/zap3.png">
+                        <h3>Samba blancas</h3>
+                        <p><del>S/ 250</del> <strong>S/ 175</strong></p>
+                        <button>Comprar</button>
+                    </article>
+
+                    <article class="cardss">
+                        <span class="descuento">-35%</span>
+                        <img src="../imagenes/zap4.png">
+                        <h3>Samba blancas</h3>
+                        <p><del>S/ 250</del> <strong>S/ 175</strong></p>
+                        <button>Comprar</button>
+                    </article>
+
+                    <article class="cardss">
+                        <span class="descuento">-35%</span>
+                        <img src="../imagenes/zap5.png">
+                        <h3>Samba blancas</h3>
+                        <p><del>S/ 250</del> <strong>S/ 175</strong></p>
+                        <button>Comprar</button>
+                    </article>
+
+                    <article class="cardss">
+                        <span class="descuento">-20%</span>
+                        <img src="../imagenes/zap6.png">
                         <h3>Zapatillas de entrenamiento</h3>
                         <p><del>S/ 200</del> <strong>S/ 160</strong></p>
                         <button>Comprar</button>
                     </article>
                 </div>
-         </section>
-        <!--Diseño numero 2-->
-        <section class="ofertas-dia">
-            <div class="banner">
-                <h2>⚡ Oferta del Día</h2>
-                <p>Hasta <strong>-40%</strong></p>
-                <button>Ver colección</button>
-            </div>
-
-            <div class="productos">
-                <div class="producto">
-                    <img src="../imagenes/zap3.png">
-                    <span>-20% Drop step low 2.0</span>
-                </div>
-
-                <div class="producto">
-                    <img src="../imagenes/zap4.png">
-                    <span>-35% Groundpulse</span>
-                </div>
-            </div>
-        </section>
-        <!--Diseño numero 3-->
-       <section class="sale-moderno">
-            <h2>🔥 SALE</h2>
-
-            <div class="productos-sale">
-                <div class="producto-sale">
-                    <img src="../imagenes/zap5.png">
-                    <div class="info">
-                        <h3>Response runner 2</h3>
-                        <p>S/ 199</p>
-                    </div>
-                </div>
-
-                <div class="producto-sale">
-                    <img src="../imagenes/zap6.png">
-                    <div class="info">
-                        <h3>Urbana Adistar control 5</h3>
-                        <p>S/ 240</p>
-                    </div>
-                </div>
-            </div>
         </section>
     </main>
 
