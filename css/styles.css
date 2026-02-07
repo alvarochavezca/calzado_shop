@@ -27,9 +27,13 @@
 /* ======================================================================
    2) RESET / BASE
    ====================================================================== */
+
 * {
-  box-sizing: border-box;
-}
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
 html, body {
   height: 100%;
@@ -47,6 +51,41 @@ body {
    3) CABECERA: logo y buscador
    ====================================================================== */
 .cabecera {
+   display: flex;
+   align-items: center;
+    justify-content: space-between;
+    padding: calc(var(--espacio) * 1) calc(var(--espacio) * 2);
+    background: white;
+    border-radius: 14px;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    margin-bottom: 35px;
+}
+
+.logo img {
+    width: 110px;
+    height: auto;
+}
+
+.texto-logo h1 {
+    font-size: 26px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.texto-logo p {
+    font-size: 14px;
+    color: #555;
+    margin-top: 4px;
+}
+
+
+
+
+   .cabecera {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -144,21 +183,19 @@ nav a:hover {
    ====================================================================== */
 .destacadas {
   display: flex;
-  gap: 30px;
-  align-items: stretch;
+  width: 100%;
+  margin: 0;
 }
 
 .tarjeta {
-  flex: 1;
-  background: #fff;
-  border: 4px solid #cfcfcf;
-  padding: 12px;
-  box-shadow: 0 2px 0 rgba(0,0,0,0.15);
+  width: 50%;
 }
+
 
 .tarjeta img {
   width: 100%;
   height: auto;
+  object-fit: cover;
   display: block;
 }
 
@@ -204,31 +241,43 @@ nav a:hover {
    ====================================================================== */
 .fila-miniaturas {
   display: flex;
-  gap: 12px;
   justify-content: center;
-  margin-top: 18px;
-  justify-content: center;
-}
-.fila-miniaturas2 {
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-  margin-top: 18px;
-  justify-content: center;
-  margin-bottom: 40px;
+  gap: 25px;
+  flex-wrap: wrap;
 }
 
 .miniatura {
-  width: 120px;
-  height: 80px;
-  border: 1px solid #ddd;
-  overflow: hidden;
+  width: 220px;
+  background-color: #f3f3f3;
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3 ease;
 }
 
 .miniatura img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  border-radius: 12px;
+}
+
+.miniatura :hover {
+  transform: translateY(-6px);
+}
+.miniatura h3 {
+  font-size: 16px;
+  margin: 10px 0 5px;
+}
+.miniatura p {
+  font-size: 16px;
+  color: #555;
+}
+
+.miniatura span {
+  font-weight: bold;
+  font-size: 16px;
+  display: block;
+  margin-top: 5px;
 }
 
 /* ======================================================================
