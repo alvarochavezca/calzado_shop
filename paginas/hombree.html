@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Calzado Hombre | CALZADO.SHOP</title>
+
+    <style>
+
+        
+
+        /* RESET BÁSICO */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(180deg, #eaeaea, #f5f5f5);
+        }
+
+        /* CONTENEDOR GENERAL */
+        .contenedor {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* HEADER */
+        .cabecera {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .logo img {
+            width: 120px;
+        }
+
+        .marca {
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        .tagline {
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* TITULO */
+        .intro {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .intro h1 {
+            font-size: 32px;
+            margin-bottom: 8px;
+        }
+
+        .intro p {
+            color: #555;
+        }
+
+        /* PRODUCTOS */
+        .productos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .producto {
+            background: white;
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .producto:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+        }
+
+        .producto img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .producto h3 {
+            margin: 8px 0;
+        }
+
+        .producto p {
+            font-weight: bold;
+            color: #111;
+        }
+
+        /* SUBTITULO */
+        h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    
+
+    
+
+<div class="contenedor">
+
+    <!-- CABECERA -->
+    <header class="cabecera">
+        <div class="logo">
+            <img src="../imagenes/logotabas.png" alt="Logo Calzado Shop">
+        </div>
+        <div>
+            <div class="marca">CALZADO.SHOP</div>
+            <div class="tagline">"Calzado.shop calidad para todas las personas"</div>
+        </div>
+    </header>
+
+    <!-- INTRO -->
+    <section class="intro">
+        <h1>Calzado para Hombre</h1>
+        <p>Zapatillas diseñadas para comodidad y estilo masculino</p>
+    </section>
+
+    <!-- PRODUCTOS PRINCIPALES -->
+    <section class="productos">
+        <div class="producto">
+            <img src="../imagenes/zapatilla10.jpeg" alt="Imagen no encontrada">
+            <h3>Zapatilla Urbana Negra</h3>
+            <p>S/ 180.00</p>
+        </div>
+
+        <div class="producto">
+            <img src="../imagenes/zapatillas4.jpeg" alt="Imagen no encontrada">
+            <h3>Zapatilla Deportiva</h3>
+            <p>S/ 220.00</p>
+        </div>
+
+        <div class="producto">
+            <img src="../imagenes/zapatilla7.jpeg" alt="Imagen no encontrada">
+            <h3>Zapatilla Casual</h3>
+            <p>S/ 200.00</p>
+        </div>
+    </section>
+
+    <!-- RECOMENDADOS -->
+    <h2>Recomendados</h2>
+
+    <section class="productos">
+        <div class="producto">
+            <img src="../imagenes/zapatilla9.jpeg" alt="Imagen no encontrada">
+            <h3>Retro 4 Negro con rojo</h3>
+            <p>S/ 180.00</p>
+        </div>
+
+        <div class="producto">
+            <img src="../imagenes/zapatilla8.jpeg" alt="Imagen no encontrada">
+            <h3>Retro 4 blanca</h3>
+            <p>S/ 200.00</p>
+        </div>
+    </section>
+
+</div>
+
+</body>
+</html>
