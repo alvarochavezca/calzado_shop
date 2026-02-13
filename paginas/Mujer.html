@@ -1,139 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <title>Calzado.Shop</title>
 
-    <style>
-    /* RESET */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    body {
-      background-color: #f2f2f2;
-      color: #333;
-    }
-
-    /* HEADER */
-    header {
-      max-width: 1100px;
-      margin: 30px auto;
-      background-color: white;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      gap: 20px;
-      padding: 20px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    }
-
-    header img {
-      width: 80px;
-    }
-
-    header h1 {
-      font-size: 1.8rem;
-    }
-
-    header p {
-      font-size: 0.9rem;
-      color: #666;
-    }
-
-    /* TITULOS */
-    h2 {
-      text-align: center;
-      margin-top: 40px;
-      font-size: 2rem;
-    }
-
-    .descripcion {
-      text-align: center;
-      margin: 10px 0 40px;
-      color: #666;
-    }
-
-    /* CONTENEDOR DE PRODUCTOS */
-    .productos {
-      max-width: 1100px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-      padding-bottom: 50px;
-    }
-
-    /* TARJETA */
-    .producto {
-      background-color: white;
-      border-radius: 15px;
-      padding: 15px;
-      text-align: center;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .producto:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-    }
-
-    .producto img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      border-radius: 12px;
-    }
-
-    .producto h3 {
-      margin: 15px 0 5px;
-      font-size: 1.1rem;
-    }
-
-    .producto p {
-      font-weight: bold;
-      color: #000;
-    }
-  </style>
-
+    <!-- Usando fuentes locales: sin imports externos -->
+    <link rel="stylesheet" href="../css/mujer.css">  
+    
 </head>
 
+<!--hola-->
 
 <body>
-    <header>
-        <img src="../imagenes/logotabas.png" alt="imagen no encontradas">
-        <div>
-            <h1><b>CALZADO SHOP</b></h1>
-            <P>"Calzado Shop calidad para todas las personas"</P>
-        </div>
-    </header>
 
+<!-- Cabecera principal -->
+
+<header class="main-header">
+  <div class="brand-container">
+    <div class="brand-content">
+      <img src="../imagenes mujer/logo.png" alt="Logo" class="logo-img">
+      <div class="brand-text">
+        <h1 class="brand-title">CALZADO.SHOP</h1>
+        <p class="brand-slogan">"calidad para todas las personas"</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navegación -->
+  
+  <nav class="navbar">
+  <div class="logo"></div>
+  
+  <ul class="nav-links">
+    <li><a href="#quienes">¿QUIÉNES SOMOS?</a></li>
+    <li><a href="#calzado">CALZADO</a></li>
+    <li><a href="#mujer">MUJER</a></li>
+    <li><a href="#hombre">HOMBRE</a></li>
+    <li><a href="#ofertas">OFERTAS</a></li>
+    <li><a href="#proximos lanzamientos">PRÓXIMOS LANZAMIENTOS</a></li>
+    <li><a href="#tendencias">TENDENCIAS</a></li>
+  </ul>
+
+  <div class="search-cart-container">
+    <div class="search-box">
+      <input type="text" placeholder="Buscar...">
+      <button>🔍</button>
+    </div>
+    
+    <div class="cart-icon">
+      🛒
+      <span class="cart-count">0</span>
+    </div>
+  </div>
+</nav>
+
+</header>
+ <div class="fondo">
+        <div class="patron"></div>
+        <div class="detalles"></div>
+        <div class="pildoras">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+
+
+  <main>
+    <div class="tituloprincipal">
     <h2>CALZADO PARA MUJER</h2>
     <P class="descripcion">Zapatillas diseñadas para comodidad y estilo femenino</P>
-   
-    <section class="productos">
-    <div class="producto"> 
-            <img src="../imagenes/Zapatillas1.jpeg" alt="imagen no encontrada">
-            <h3>Zapatilla New Balance Running</h3>
-            <p>S/160.00</p>
     </div>
-    <div class="producto">
-            <img src="../imagenes/Zapatillas2.jpeg" alt="Imagen no encontrada">
+    <section class="fila-miniaturas">
+    <div class="miniatura"> 
+            <img src="../imagenes mujer/mujer1.png" alt="Imagen no encontrada">
+            <h3>Zapatilla New Balance Running</h3>
+            <span>S/160.00</span>
+    </div>
+    <div class="miniatura">
+            <img src="../imagenes mujer/mujer2.png" alt="Imagen no encontrada">
             <h3>Zapatillas Fila Running</h3>
-            <p>S/140.00</p>
+            <span>S/140.00</span>
     </div>   
-            <div class="producto">
-            <img src="../imagenes/Zapatillas3.jpeg" alt="Imagen no encontrada">
+    <div class="miniatura">
+            <img src="../imagenes mujer/mujer3.png" alt="Imagen no encontrada">
             <h3>Zapatillas New Balance Running</h3>
-    <p>s/130.00</p>
+            <span>s/130.00</span>
     </div>  
+    <div class="miniatura">
+            <img src="../imagenes mujer/mujer4.png" alt="Imagen no encontrada">
+            <h3>Zapatillas Nike Urbana</h3>
+            <span>S/120.00</span>
+    </div>
+    <div class="miniatura">
+            <img src="../imagenes mujer/mujer6.png" alt="Imagen no encontrada">
+            <h3>Zapatillas Puma Running</h3>
+            <span>S/170.00</span>
+    </div>
+    <div class="miniatura">
+      <img src="../imagenes mujer/mujer7.png" alt="Imagen no encontrada">
+      <h3>Zapatillas Puma </h3>
+      <span>S/110.00</span>
+    </div>
+
+   </section>
 
 
-    </section>
+   <section class="historia-negra">
+  <h2>Calzado.Shop · Historia y Legado</h2>
 
+  <p>
+    Calzado.Shop nace con una visión clara: ofrecer calzado moderno,
+    cómodo y accesible para todas las personas. Desde nuestros inicios,
+    creemos que un buen par de zapatillas no solo acompaña tu camino,
+    sino que define tu estilo y actitud.
+  </p>
+
+  <p>
+    Inspirados en la cultura urbana, el deporte y las nuevas tendencias,
+    trabajamos día a día para traer modelos que combinan calidad,
+    diseño y rendimiento. Nuestro compromiso es acompañarte en cada
+    paso, ya sea en la calle, el trabajo o el entrenamiento.
+  </p>
+
+  <p>
+    Más que una tienda, somos una comunidad que camina hacia adelante,
+    marcando huella con cada paso.
+  </p>
+</section>
+
+    </main>
+<div>    
+<footer>
+    <p>©2026 Información sobre Calzado Shop</p>
+    <p>Todos los derechos reservados</p>
+    <p>libro de reclamaciones</p>
+</footer>
+</div>
+  
 </body>
+
+  
+
 </html>
