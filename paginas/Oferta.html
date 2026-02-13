@@ -5,362 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ofertas</title>
 </head>
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: Arial, Helvetica, sans-serif;
-    }
 
-    body {
-        margin: 0;
-        justify-content: center;
-        align-items: center;
-        background: #f2f2f2;
-    }
+    <link rel="stylesheet" href="../css/ofertas.css">
 
-    
-    /*Header*/
-    header {
-        max-width: 1100px;
-        margin: 30px auto;
-        background-color: white;
-        border-radius: 12px;
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        padding: 20px;
-        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    }
-
-    .cabecera {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 15px 40px;
-        background: white;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        position: relative; /* IMPORTANTE */
-    }
-
-    .logo {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-    }
-
-    .logo img {
-        width: 60px;
-    }
-    
-    .nav-principal ul {
-        display: flex;
-        gap: 20px;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    .nav-principal a {
-        text-decoration: none;
-        color: #333;
-        font-weight: 500;
-    }
-
-    .nav-principal a:hover {
-        color: #e63946;
-    }
-
-    .buscador {
-        display: flex;
-        gap: 5px;
-    }
-
-    .buscador input {
-        padding: 6px 10px;
-        border-radius: 6px;
-        border: 1px solid #ccc;
-    }
-
-    .buscador button {
-        border: none;
-        background: #e63946;
-        color: white;
-        padding: 6px 10px;
-        border-radius: 6px;
-        cursor: pointer;
-    }
-
-    /* ===== FONDO / HERO ===== */
-
-    .fondo {
-        position: relative;
-        width: 100%;
-        height: 90vh;
-        background: linear-gradient(160deg, #020412, #0a1030);
-        overflow: hidden;
-    }
-
-    .patron {
-        position: absolute;
-        inset: 0;
-        background-image: radial-gradient(#ffffff22 1px, transparent 1px);
-        background-size: 22px 22px;
-        z-index: 1;
-    }
-
-    .detalles {
-        position: absolute;
-        inset: 0;
-        background-image:
-            linear-gradient(120deg, transparent 85%, #ff2f9222 90%),
-            linear-gradient(-120deg, transparent 85%, #6b4bff22 90%);
-    }
-
-    .contenido {
-        position: relative;
-        z-index: 1;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        color: white;
-    }
-
-    .contenido h1 {
-        font-size: 3rem;
-    }
-
-    .contenido p {
-        margin-top: 10px;
-        opacity: 0.85;
-    }
-
-    .fondo {
-        margin: 0;
-        min-height: 100vh;
-        background: #0f172a; /* fondo oscuro */
-        overflow: hidden; /* para que no salga scroll */
-        position: relative;
-    }
-
-    .detalles {
-        position: absolute;
-        inset: 0;
-        z-index: 2;
-    }    
-
-    .patron {
-        position: absolute;
-        inset: 0;
-        z-index: 1;
-    }
-
-
-
-    .pildoras {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        overflow: hidden;
-        inset: 0;
-        z-index: 3; /* queda detrás del contenido */
-        pointer-events: none;
-    }
-
-    .pildoras span {
-        position: absolute;
-        bottom: -100px;
-        width: 30px;
-        height: 60px;
-        background: linear-gradient(red, darkred);
-        border-radius: 50px;
-        animation: subir 10s linear infinite;
-        opacity: 0.8;
-    }
-
-    .contenido {
-        position: relative;
-        z-index: 4;
-    }
-
-    @keyframes subir {
-        0% {
-            transform: translateY(0) rotate(0deg);
-            opacity: 0;
-        }
-        50% {
-            opacity: 0.8;
-        }
-        100% {
-            transform: translateY(-110vh) rotate(360deg);
-            opacity: 0;
-        }
-    }
-
-    .pildoras span:nth-child(1) {
-        left: 10%;
-        animation-duration: 12s;
-    }
-
-    .pildoras span:nth-child(2) {
-        left: 30%;
-        width: 20px;
-        height: 40px;
-        animation-duration: 8s;
-    }
-
-    .pildoras span:nth-child(3) {
-        left: 50%;
-        animation-duration: 15s;
-    }
-
-    .pildoras span:nth-child(4) {
-        left: 70%;
-        width: 25px;
-        height: 50px;
-        animation-duration: 10s;
-    }
-
-    .pildoras span:nth-child(5) {
-        left: 90%;
-        animation-duration: 18s;
-    }
-
-
-    header img {
-        width: 80px;
-    }
-
-    header h1 {
-        font-size: 1.8rem;
-    }
-
-    header p {
-        font-size: 0.9rem;
-        color: #666;
-    }
-
-    /*Main*/
-
-    section {
-        margin: 60px 0;
-    }
-
-    h2 {
-        text-align: center;
-        margin-bottom: 30px;
-    }
-
-    button {
-        cursor: pointer;
-    }
-
-    /*Estilo de Diseño Numero 1*/
-
-    .productos {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr); /* 4 columnas */
-        gap: 30px;
-        max-width: 1200px;
-        margin: 0 auto; /* centra todo */
-        padding: 40px;
-    }
-    
-    /* Quinta card: centro-izquierda */
-    .cardss:nth-child(5) {
-        grid-column: 2;
-    }
-
-    /* Sexta card: centro-derecha */
-    .cardss:nth-child(6) {
-        grid-column: 3;
-    }
-
-
-
-    .ofertas-simples .cards {
-        display: flex;
-        gap: 20px;
-        justify-content: center;
-    }
-
-    .productos {
-        margin-top: 40px;
-    }
-
-    .cardss {
-        background: #fff;
-        border-radius: 12px;
-        padding: 15px;
-        text-align: center;
-        position: relative;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    .productos .cardss img {
-        width: 100%;
-        height: 150px;
-        max-height: 150px;
-        object-fit: contain;
-        display: block;
-        margin-bottom: 0 auto 10px;
-    }
-
-    .descuento {
-        position: absolute;
-        /* Posiciona el elemento de forma libre dentro de su contenedor padre */
-        top: 10px;
-        /* Mueve el elemento 10px desde la parte superior del contenedor */
-        left: 10px;
-        /* Mueve el elemento 10px desde el lado izquierdo del contenedor */
-        background: red;
-        color: white;
-        padding: 5px 8px;
-        border-radius: 8px;
-    }
-
-    .productos .cardss button {
-        background: black;
-        color: white;
-        border: none;
-        padding: 8px;
-        width: 100%;
-        border-radius: 6px;
-    }
-
-</style>
 <body>
 
-    <header class="cabecera">
-        <div class="logo">
-            <img src="../imagenes/logotabas.png" alt="Imagen no encontrada">
-            <div>
-                <h1><b>Calzado.Shop</b></h1>
-                <p class="slogan">Calzados de calidad para todas las personas</p>
+    <header class="main-header">
+        <div class="brand-container">
+            <div class="brand-content">
+            <img src="../imagenes mujer/logo.png" alt="Logo" class="logo-img">
+            <div class="brand-text">
+                <h1 class="brand-title">CALZADO.SHOP</h1>
+                <p class="brand-slogan">"calidad para todas las personas"</p>
+            </div>
             </div>
         </div>
-            <nav class="nav-principal">
-                <ul>
-                    <li><a href="#quienes">¿Quiénes somos?</a></li>
-                    <li><a href="#calzado">Calzado</a></li>
-                    <li><a href="#mujer">Mujer</a></li>
-                    <li><a href="#hombre">Hombre</a></li>
-                    <li><a href="#ofertas">Ofertas</a></li>
-                    <li><a href="#Proximos lanzamiento">Próximos Lanzamientos</a></li>
-                    <li><a href="#Tendencias">Tendencias</a></li>
-                </ul>
-            </nav>
 
-        <div class="buscador">
-            <input type="search" placeholder="Buscar">
-            <button aria-label="Buscar">🔍</button>
-        </div>
+        <!-- Navegación -->
+        
+        <nav class="navbar">
+            <div class="logo"></div>
+            
+            <ul class="nav-links">
+                <li><a href="#quienes">¿QUIÉNES SOMOS?</a></li>
+                <li><a href="#calzado">CALZADO</a></li>
+                <li><a href="#mujer">MUJER</a></li>
+                <li><a href="#hombre">HOMBRE</a></li>
+                <li><a href="#ofertas">OFERTAS</a></li>
+                <li><a href="#proximos lanzamientos">PRÓXIMOS LANZAMIENTOS</a></li>
+                <li><a href="#tendencias">TENDENCIAS</a></li>
+            </ul>
+
+            <div class="search-cart-container">
+                <div class="search-box">
+                    <input type="text" placeholder="Buscar...">
+                    <button>🔍</button>
+                </div>
+                
+                <div class="cart-icon">🛒
+                    <span class="cart-count">0</span>
+                </div>
+            </div>
+        </nav>
 
     </header>
 
@@ -381,65 +67,76 @@
             <h1>Calzado Shop</h1>
             <p>Ofertas especiales</p>
         </div>
-    </div>
 
-    <main class="principal">
-        <!--Diseño numero 1-->
-        <section class="ofertas-simples">
-            <h2>🔥 Ofertas Imperdibles</h2>
+   <main>
+        <div class="tituloprincipal">
+            <h2>CALZADO PARA MUJER</h2>
+            <P class="descripcion">Zapatillas diseñadas para comodidad y estilo femenino</P>
+        </div>
+        <section class="fila-miniaturas">
+        <div class="miniatura"> 
+                <img src="../imagenes mujer/mujer1.png" alt="Imagen no encontrada">
+                <h3>Zapatilla New Balance Running</h3>
+                <span>S/160.00</span>
+        </div>
+        <div class="miniatura">
+                <img src="../imagenes mujer/mujer2.png" alt="Imagen no encontrada">
+                <h3>Zapatillas Fila Running</h3>
+                <span>S/140.00</span>
+        </div>   
+        <div class="miniatura">
+                <img src="../imagenes mujer/mujer3.png" alt="Imagen no encontrada">
+                <h3>Zapatillas New Balance Running</h3>
+                <span>s/130.00</span>
+        </div>  
+        <div class="miniatura">
+                <img src="../imagenes mujer/mujer4.png" alt="Imagen no encontrada">
+                <h3>Zapatillas Nike Urbana</h3>
+                <span>S/120.00</span>
+        </div>
+        <div class="miniatura">
+                <img src="../imagenes mujer/mujer6.png" alt="Imagen no encontrada">
+                <h3>Zapatillas Puma Running</h3>
+                <span>S/170.00</span>
+        </div>
+        <div class="miniatura">
+            <img src="../imagenes mujer/mujer7.png" alt="Imagen no encontrada">
+            <h3>Zapatillas Puma </h3>
+            <span>S/110.00</span>
+        </div>
 
-                <div class="productos">
-                    <article class="cardss">
-                        <span class="descuento">-35%</span>
-                        <img src="../imagenes/zap1.png">
-                        <h3>Samba blancas</h3>
-                        <p><del>S/ 250</del> <strong>S/ 175</strong></p>
-                        <button>Comprar</button>
-                    </article>
+    </section>
 
-                    <article class="cardss">
-                        <span class="descuento">-35%</span>
-                        <img src="../imagenes/zap2.png">
-                        <h3>Samba blancas</h3>
-                        <p><del>S/ 250</del> <strong>S/ 175</strong></p>
-                        <button>Comprar</button>
-                    </article>
+     <section class="historia-negra">
+        <h2>Calzado.Shop · Historia y Legado</h2>
 
-                    <article class="cardss">
-                        <span class="descuento">-35%</span>
-                        <img src="../imagenes/zap3.png">
-                        <h3>Samba blancas</h3>
-                        <p><del>S/ 250</del> <strong>S/ 175</strong></p>
-                        <button>Comprar</button>
-                    </article>
+        <p>
+            Calzado.Shop nace con una visión clara: ofrecer calzado moderno,
+            cómodo y accesible para todas las personas. Desde nuestros inicios,
+            creemos que un buen par de zapatillas no solo acompaña tu camino,
+            sino que define tu estilo y actitud.
+        </p>
 
-                    <article class="cardss">
-                        <span class="descuento">-35%</span>
-                        <img src="../imagenes/zap4.png">
-                        <h3>Samba blancas</h3>
-                        <p><del>S/ 250</del> <strong>S/ 175</strong></p>
-                        <button>Comprar</button>
-                    </article>
+        <p>
+            Inspirados en la cultura urbana, el deporte y las nuevas tendencias,
+            trabajamos día a día para traer modelos que combinan calidad,
+            diseño y rendimiento. Nuestro compromiso es acompañarte en cada
+            paso, ya sea en la calle, el trabajo o el entrenamiento.
+        </p>
 
-                    <article class="cardss">
-                        <span class="descuento">-35%</span>
-                        <img src="../imagenes/zap5.png">
-                        <h3>Samba blancas</h3>
-                        <p><del>S/ 250</del> <strong>S/ 175</strong></p>
-                        <button>Comprar</button>
-                    </article>
+        <p>
+            Más que una tienda, somos una comunidad que camina hacia adelante,
+            marcando huella con cada paso.
+        </p>
+    </section>
 
-                    <article class="cardss">
-                        <span class="descuento">-20%</span>
-                        <img src="../imagenes/zap6.png">
-                        <h3>Zapatillas de entrenamiento</h3>
-                        <p><del>S/ 200</del> <strong>S/ 160</strong></p>
-                        <button>Comprar</button>
-                    </article>
-                </div>
-        </section>
     </main>
-
+        <footer>
+            <p>©2026 Información sobre Calzado Shop</p>
+            <p>Todos los derechos reservados</p>
+            <p>libro de reclamaciones</p>
+        </footer>
+    </div>
     
 </body>
 </html>

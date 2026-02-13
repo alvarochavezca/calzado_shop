@@ -313,8 +313,7 @@
 .fondo {
         margin: 0;
         min-height: 100vh;
-        background: #0f172a; /* fondo oscuro */
-        overflow: hidden; /* para que no salga scroll */
+        background: #0f172a; /* fondo oscuro *//* para que no salga scroll */
         position: relative;
     }
 
@@ -424,6 +423,8 @@
    
    
     .fila-miniaturas {
+    max-width: 1400px;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 por fila */
     gap: 30px;
@@ -447,6 +448,7 @@
     border-radius: 15px;
     transition: transform 0.4s ease;
 }
+
 
 
         .miniatura:hover {
