@@ -2,183 +2,212 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Calzado Hombre | CALZADO.SHOP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calzado.Shop</title>
 
-    <style>
-
-        
-
-        /* RESET BÁSICO */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(180deg, #eaeaea, #f5f5f5);
-        }
-
-        /* CONTENEDOR GENERAL */
-        .contenedor {
-            max-width: 1200px;
-            margin: auto;
-            padding: 20px;
-        }
-
-        /* HEADER */
-        .cabecera {
-            background: white;
-            border-radius: 12px;
-            padding: 20px;
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            margin-bottom: 30px;
-        }
-
-        .logo img {
-            width: 120px;
-        }
-
-        .marca {
-            font-size: 26px;
-            font-weight: bold;
-        }
-
-        .tagline {
-            font-size: 14px;
-            color: #555;
-        }
-
-        /* TITULO */
-        .intro {
-            text-align: center;
-            margin-bottom: 25px;
-        }
-
-        .intro h1 {
-            font-size: 32px;
-            margin-bottom: 8px;
-        }
-
-        .intro p {
-            color: #555;
-        }
-
-        /* PRODUCTOS */
-        .productos {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 25px;
-            margin-bottom: 40px;
-        }
-
-        .producto {
-            background: white;
-            border-radius: 12px;
-            padding: 15px;
-            text-align: center;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .producto:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 30px rgba(0,0,0,0.2);
-        }
-
-        .producto img {
-            width: 100%;
-            border-radius: 10px;
-            margin-bottom: 10px;
-        }
-
-        .producto h3 {
-            margin: 8px 0;
-        }
-
-        .producto p {
-            font-weight: bold;
-            color: #111;
-        }
-
-        /* SUBTITULO */
-        h2 {
-            margin-bottom: 20px;
-            text-align: center;
-        }
-    </style>
+    <!-- Usando fuentes locales: sin imports externos -->
+    <link rel="stylesheet" href="../css/hombre.css">  
+    
 </head>
+
+<!--hola-->
 
 <body>
 
+<!-- Cabecera principal -->
+
+<header class="main-header">
+  <div class="brand-container">
+    <div class="brand-content">
+      <img src="../imagenes mujer/logo.png" alt="Logo" class="logo-img">
+      <div class="brand-text">
+        <h1 class="brand-title">CALZADO.SHOP</h1>
+        <p class="brand-slogan">"calidad para todas las personas"</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navegación -->
+  <!--hola-->
+  <nav class="navbar">
+  <div class="logo"></div>
+  
+  <ul class="nav-links">
+    <li><a href="#quienes">¿QUIÉNES SOMOS?</a></li>
+    <li><a href="#calzado">CALZADO</a></li>
+    <li><a href="Mujer.html">MUJER</a></li>
+    <li><a href="#hombre">HOMBRE</a></li>
+    <li><a href="#ofertas">OFERTAS</a></li>
+    <li><a href="#proximos lanzamientos">PRÓXIMOS LANZAMIENTOS</a></li>
+    <li><a href="#tendencias">TENDENCIAS</a></li>
+  </ul>
+
+  <div class="search-cart-container">
+    <div class="search-box">
+      <input type="text" placeholder="Buscar...">
+      <button>🔍</button>
+    </div>
     
+    <div class="cart-icon">
+      🛒
+      <span class="cart-count">0</span>
+    </div>
+  </div>
+</nav>
 
+</header>
+ <div class="fondo">
+        <div class="patron"></div>
+        <div class="detalles"></div>
+        <div class="pildoras">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+
+
+  <main>
+    <div class="tituloprincipal">
+    <h2>CALZADO PARA HOMBRE</h2>
+    <P class="descripcion">Zapatillas diseñadas para comodidad y estilo masculino</P>
+    </div>
+    <section class="fila-miniaturas">
+    <div class="miniatura"> 
+            <img src="../imagenes hombre/hombre1.jpg" alt="Imagen no encontrada">
+            <h3>Zapatilla Nike Urbana</h3>
+            <span>S/160.00</span>
+    </div>
+
+    <div class="miniatura">
+            <img src="../imagenes hombre/hombre2.jpg" alt="Imagen no encontrada">
+            <h3>Zapatillas Nike Running</h3>
+            <span>S/140.00</span>
+    </div>   
+
+    <div class="miniatura">
+            <img src="../imagenes hombre/hombre3.jpg" alt="Imagen no encontrada">
+            <h3>Zapatillas Nike Running</h3>
+            <span>s/130.00</span>
+    </div>
+
+    <div class="miniatura">
+            <img src="../imagenes hombre/hombre4.jpg" alt="Imagen no encontrada">
+            <h3>Zapatillas Nike Urbana</h3>
+            <span>S/120.00</span>
+    </div>
+
+    <div class="miniatura">
+            <img src="../imagenes hombre/hombre5.jpg" alt="Imagen no encontrada">
+            <h3>Zapatillas Nike Running</h3>
+            <span>S/170.00</span>
+      </div>
+
+    <div class="miniatura">
+      <img src="../imagenes hombre/hombre6.jpg" alt="Imagen no encontrada">
+      <h3>Zapatillas Puma Running</h3>
+      <span>S/110.00</span>
+    </div>
+
+    <div class="miniatura">
+        <img src="../imagenes hombre/hombre7.jpg" alt="Imagen no encontrada">
+        <h3>Zapatillas Nike Running</h3>
+        <span>S/120.00</span>
+    </div>
+
+    <div class="miniatura">
+        <img src="../imagenes hombre/hombre8.jpg" alt="Imagen no encontrada">
+        <h3>Zapatillas Nike Urbana</h3>
+        <span>S/130.00</span>
+    </div>
+
+    <div class="miniatura">
+        <img src="../imagenes hombre/hombre9.jpg" alt="Imagen no encontrada">
+        <h3>Zapatillas Nike Running</h3>
+        <span>S/160.00</span>
+    </div>
+
+    <div class="miniatura">
+        <img src="../imagenes hombre/hombre10.jpg" alt="Imagen no encontrada">
+        <h3>Zapatillas Nike Running</h3>
+        <span>S/160.00</span>
+    </div>
+
+    <div class="miniatura">
+        <img src="../imagenes hombre/hombre11.jpg" alt="Imagen no encontrada">
+        <h3>Zapatillas Adidas Campus Urbana</h3>
+        <span>S/130.00</span>
+    </div>
+
+    <div class="miniatura">
+        <img src="../imagenes hombre/hombre12.jpg" alt="Imagen no encontrada">
+        <h3>Zapatillas Nike Running</h3>
+        <span>S/120.00</span>
+    </div>
     
+    <div class="miniatura">
+        <img src="../imagenes hombre/hombre13.jpg" alt="Imagen no encontrada">
+        <h3>Zapatillas Nike Running</h3>
+        <span>S/170.00</span>
+    </div>
 
-<div class="contenedor">
+    <div class="miniatura">
+        <img src="../imagenes hombre/hombre14.jpg" alt="Imagen no encontrada">
+        <h3>Zapatillas Nike Urbana</h3>
+        <span>S/150.00</span>
+    </div>
 
-    <!-- CABECERA -->
-    <header class="cabecera">
-        <div class="logo">
-            <img src="../imagenes/logotabas.png" alt="Logo Calzado Shop">
-        </div>
-        <div>
-            <div class="marca">CALZADO.SHOP</div>
-            <div class="tagline">"Calzado.shop calidad para todas las personas"</div>
-        </div>
-    </header>
+    <div class="miniatura">
+        <img src="../imagenes hombre/hombre15.jpg" alt="Imagen no encontrada">
+        <h3>Zapatillas Adidas Urbanas</h3>
+        <span>S/150.00</span>
+    </div>
 
-    <!-- INTRO -->
-    <section class="intro">
-        <h1>Calzado para Hombre</h1>
-        <p>Zapatillas diseñadas para comodidad y estilo masculino</p>
-    </section>
+    <div class="miniatura">
+        <img src="../imagenes hombre/hombre16.jpg" alt="Imagen no encontrada">
+        <h3>Zapatillas Puma Running</h3>
+        <span>S/130.00</span>
+    </div>
 
-    <!-- PRODUCTOS PRINCIPALES -->
-    <section class="productos">
-        <div class="producto">
-            <img src="../imagenes/zapatilla10.jpeg" alt="Imagen no encontrada">
-            <h3>Zapatilla Urbana Negra</h3>
-            <p>S/ 180.00</p>
-        </div>
+   </section>
 
-        <div class="producto">
-            <img src="../imagenes/zapatillas4.jpeg" alt="Imagen no encontrada">
-            <h3>Zapatilla Deportiva</h3>
-            <p>S/ 220.00</p>
-        </div>
 
-        <div class="producto">
-            <img src="../imagenes/zapatilla7.jpeg" alt="Imagen no encontrada">
-            <h3>Zapatilla Casual</h3>
-            <p>S/ 200.00</p>
-        </div>
-    </section>
+   <section class="historia-negra">
+  <h2>Calzado.Shop · Historia y Legado</h2>
 
-    <!-- RECOMENDADOS -->
-     <!--asodasdo a-->
-     <!--sdasn duasbnd a-->
-    <h2>Recomendados</h2>
+  <p>
+    Calzado.Shop nace con una visión clara: ofrecer calzado moderno,
+    cómodo y accesible para todas las personas. Desde nuestros inicios,
+    creemos que un buen par de zapatillas no solo acompaña tu camino,
+    sino que define tu estilo y actitud.
+  </p>
 
-    <section class="productos">
-        <div class="producto">
-            <img src="../imagenes/zapatilla9.jpeg" alt="Imagen no encontrada">
-            <h3>Retro 4 Negro con rojo</h3>
-            <p>S/ 180.00</p>
-        </div>
+  <p>
+    Inspirados en la cultura urbana, el deporte y las nuevas tendencias,
+    trabajamos día a día para traer modelos que combinan calidad,
+    diseño y rendimiento. Nuestro compromiso es acompañarte en cada
+    paso, ya sea en la calle, el trabajo o el entrenamiento.
+  </p>
 
-        <div class="producto">
-            <img src="../imagenes/zapatilla8.jpeg" alt="Imagen no encontrada">
-            <h3>Retro 4 blanca</h3>
-            <p>S/ 200.00</p>
-        </div>
-    </section>
+  <p>
+    Más que una tienda, somos una comunidad que camina hacia adelante,
+    marcando huella con cada paso.
+  </p>
+</section>
 
+    </main>
+<div>    
+<footer>
+    <p>©2026 Información sobre Calzado Shop</p>
+    <p>Todos los derechos reservados</p>
+    <p>libro de reclamaciones</p>
+</footer>
 </div>
-
+  
 </body>
+
+  
+
 </html>
