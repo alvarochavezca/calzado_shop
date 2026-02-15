@@ -99,6 +99,8 @@
     padding: 40px 15px;
   }
 
+  
+
 }
 
 
@@ -425,9 +427,11 @@
    
     .fila-miniaturas {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 por fila */
+    /* Esto crea columnas de al menos 250px. Si no caben, bajan a la siguiente fila */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
     gap: 30px;
     padding: 40px 5%;
+    
 }
 
        .miniatura {
@@ -441,11 +445,15 @@
   }
 
   .miniatura img {
-      width: 100%;
-      height: 220px;   /* más horizontal */
-      object-fit: cover;
-      border-radius: 15px;
-      transition: transform 0.4s ease;
+   
+    width: 100%;
+    height: 200px;      /* Altura fija para que todas las cajas sean iguales */
+    object-fit: contain; /* ¡ESTO ES LO IMPORTANTE! Evita que se estire */
+    background-color: #f9f9f9; /* Opcional: fondo suave para el espacio vacío */
+    border-radius: 15px;
+    transition: transform 0.4s ease;
+    display: block;
+
   }
 
 
