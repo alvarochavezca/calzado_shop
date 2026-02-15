@@ -1,0 +1,518 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* ========================= */
+/* TABLET */
+/* ========================= */
+
+@media (max-width: 1024px) {
+
+
+ 
+
+  /* Navbar */
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* Marca superior */
+  .brand-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .brand-title {
+    font-size: 2rem;
+  }
+
+  /* Miniaturas */
+  .miniatura {
+    width: 45%;
+  }
+
+  /* Fondo texto principal */
+  .contenido h1 {
+    font-size: 2.2rem;
+  }
+
+}
+
+
+/* ========================= */
+/* CELULAR */
+/* ========================= */
+
+@media (max-width: 600px) {
+
+  /* Navbar */
+  .navbar {
+    flex-direction: column;
+    padding: 1rem 3%;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .search-cart-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Marca */
+  .brand-title {
+    font-size: 1.6rem;
+  }
+
+  .brand-slogan {
+    font-size: 0.9rem;
+  }
+
+  /* Miniaturas (1 por fila) */
+  .miniatura {
+    width: 100%;
+  }
+
+  /* Hero */
+  .contenido h1 {
+    font-size: 1.6rem;
+  }
+
+  .contenido p {
+    font-size: 0.9rem;
+  }
+
+  /* Historia */
+  .historia-negra {
+    padding: 40px 15px;
+  }
+
+}
+
+
+
+/* Contenedor Superior (Blanco Opaco) */
+.brand-container {
+  background-color: #f5f5f5; /* Blanco opaco / Gris muy claro */
+  padding: 20px 0;
+  display: flex;
+  justify-content: center; /* Centra todo el conjunto en la pantalla */
+}
+
+.brand-content {
+  display: flex;
+  align-items: center; /* Alinea verticalmente logo y texto */
+  gap: 20px; /* Espacio entre logo y texto */
+}
+
+.logo-img {
+  width: 80px; /* Ajusta según el tamaño de tu imagen */
+  height: auto;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column; /* Pone el slogan debajo del título */
+}
+
+.brand-title {
+  font-family: 'Montserrat', sans-serif; /* Tipografía comercial */
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #1a1a1a;
+  line-height: 1;
+}
+
+.brand-slogan {
+  font-family: 'Playfair Display', serif; /* Estilo más elegante */
+  font-size: 1rem;
+  color: #666;
+  text-transform: lowercase;
+  margin-top: 5px;
+}
+
+
+
+
+
+
+/*NAVEGACION*/
+
+.nav-links a {
+    position: relative;
+    text-decoration: none;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: white;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+
+.navbar {
+  background-color: #000000; /* Negro puro */
+  color: #ffffff; /* Letras blancas */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  border-bottom: 1px solid #333; /* Línea sutil para separar */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-weight: bold;
+  
+}
+
+.nav-links a:hover {
+  color: #00d4ff; /* Un toque de color al pasar el mouse */
+}
+
+
+
+/*BUSQUEDA (SEARCH)*/
+.search-cart-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.search-box {
+  display: flex;
+  background: #1a1a1a;
+  border-radius: 20px;
+  padding: 5px 15px;
+  border: 1px solid #444;
+}
+
+.search-box input {
+  background: transparent;
+  border: none;
+  color: white;
+  outline: none;
+}
+
+.cart-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.cart-count {
+  background: #ff4757; /* Color llamativo para el contador */
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 50%;
+  position: absolute;
+  top: -5px;
+  right: -10px;
+}
+
+
+/*Logo y texto*/
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+   
+}
+
+.logo img {
+  width: 180px;
+  height: 120px;
+  display: flex;
+}
+
+
+
+.logo h1 {
+  margin: 0;
+  font-size: 32px;
+  letter-spacing: 2px;
+  
+}
+
+.slogan {
+  font-size: 14px;
+  color: #666;
+}
+
+
+
+
+.patron {
+        position: absolute;
+        inset: 0;
+        background-image: radial-gradient(#ffffff22 1px, transparent 1px);
+        background-size: 22px 22px;
+        z-index: 1;
+    }
+
+.detalles {
+        position: absolute;
+        inset: 0;
+        background-image:
+            linear-gradient(120deg, transparent 85%, #ff2f9222 90%),
+            linear-gradient(-120deg, transparent 85%, #6b4bff22 90%);
+    }
+
+.contenido {
+        position: relative;
+        z-index: 1;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: white;
+    }
+
+.contenido h1 {
+        font-size: 3rem;
+    }
+
+.contenido p {
+        margin-top: 10px;
+        opacity: 0.85;
+    }
+
+.fondo {
+        margin: 0;
+        min-height: 100vh;
+        background: #0f172a; /* fondo oscuro */
+        overflow: hidden; /* para que no salga scroll */
+        position: relative;
+    }
+
+    .detalles {
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+    }    
+
+    .patron {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+    }
+
+
+
+    .pildoras {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        inset: 0;
+        z-index: 3; /* queda detrás del contenido */
+        pointer-events: none;
+    }
+
+    .pildoras span {
+        position: absolute;
+        bottom: -100px;
+        width: 30px;
+        height: 60px;
+        background: linear-gradient(red, darkred);
+        border-radius: 50px;
+        animation: subir 10s linear infinite;
+        opacity: 0.8;
+    }
+
+    .contenido {
+        position: relative;
+        z-index: 4;
+    }
+
+    @keyframes subir {
+        0% {
+            transform: translateY(0) rotate(0deg);
+            opacity: 0;
+        }
+        50% {
+            opacity: 0.8;
+        }
+        100% {
+            transform: translateY(-110vh) rotate(360deg);
+            opacity: 0;
+        }
+    }
+
+    .pildoras span:nth-child(1) {
+        left: 10%;
+        animation-duration: 12s;
+    }
+
+    .pildoras span:nth-child(2) {
+        left: 30%;
+        width: 20px;
+        height: 40px;
+        animation-duration: 8s;
+    }
+
+    .pildoras span:nth-child(3) {
+        left: 50%;
+        animation-duration: 15s;
+    }
+
+    .pildoras span:nth-child(4) {
+        left: 70%;
+        width: 25px;
+        height: 50px;
+        animation-duration: 10s;
+    }
+
+    .pildoras span:nth-child(5) {
+        left: 90%;
+        animation-duration: 18s;
+    }
+
+
+    header img {
+        width: 80px;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 0.9rem;
+        color: #666;
+    }
+
+  
+   
+    .fila-miniaturas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 por fila */
+    gap: 30px;
+    padding: 40px 5%;
+}
+
+     .miniatura {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  }
+
+  .miniatura img {
+      width: 100%;
+      height: 220px;   /* más horizontal */
+      object-fit: cover;
+      border-radius: 15px;
+      transition: transform 0.4s ease;
+  }
+
+
+        .miniatura:hover {
+        transform: translateY(-6px);
+        }
+        .miniatura h3 {
+        font-size: 16px;
+        margin: 10px 0 5px;
+        }
+        .miniatura p {
+        font-size: 16px;
+        color: #555;
+        }
+
+        .miniatura span {
+        font-weight: bold;
+        font-size: 16px;
+        display: block;
+        margin-top: 5px;
+        }
+
+        .tituloprincipal h2 {
+            text-align: center;
+            color: white;
+            margin-top: 12px;
+            
+        }
+
+        .tituloprincipal p {
+            text-align: center;
+            color: white;
+            margin-bottom: 12px;
+            line-height: 3.6;
+        }
+
+        .historia-negra {
+        background: #f5f5f5;
+        color: black;
+        padding: 70px 20px;
+        text-align: center;
+        }
+
+        .historia-negra h2 {
+        font-size: 28px;
+        margin-bottom: 30px;
+        letter-spacing: 1px;
+        }
+
+        .historia-negra p {
+        max-width: 900px;
+        margin: 0 auto 18px;
+        line-height: 1.8;
+        font-size: 16px;
+        color: black;
+        font-weight: bold;
+        }
+
+        
+
+        footer {
+        background: #111;
+        color: #fff;
+        text-align: center;
+        padding: 30px 20px;
+        font-size: 14px;
+        }
+
+        footer span {
+        display: block;
+        margin: 6px 0;
+        color: #ccc;
+        }
+

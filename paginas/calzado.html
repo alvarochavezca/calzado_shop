@@ -1,223 +1,325 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calzados</title>
-    <style>
+    <title>Calzado.Shop</title>
 
-    body {
-     font-family: Helvetica, Arial, sans-serif;
-    background-color: #fff;
-    margin: 20px;
-    color: #000;
-        }   
-    header {
-     display: flex;
-     align-items: center;
-    justify-content: space-between;
-    justify-content: center;
-   }
-   
-    header img {
-     width: 250px;
-    height: auto;
-    display: block;
-    }
-    .marca {    
-    font-size: 30px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    text-align: center;
-    gap: 5px;
-    color: black;
-    }
+    <!-- Usando fuentes locales: sin imports externos -->
+    <link rel="stylesheet" href="../css/calzado.css">  
     
-    .tagline {
-        font-size: 15px;
-        text-align: center;
-        margin-top: 5px;
-        color: #555555;
-    }
-    .contenedor-productos {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-            margin-top: 30px;
-            padding: 0 20px;
-        }
-
-        .tarjeta-producto {
-            display: flex;
-            flex-direction: column;
-            text-decoration: none;
-            color: black;
-        }
-
-        .contenedor-imagen {
-            background-color: #ebedee; /* El gris claro de la imagen de referencia */
-            aspect-ratio: 1 / 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-         }
-
-        .contenedor-imagen img {
-            width: 90%;
-            height: auto;
-            object-fit: contain;
-        }
-
-        .info-producto {
-            padding: 10px 0;
-            font-size: 14px;
-        }
-
-        .precio {
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-
-        .nombre-producto {
-            margin-bottom: 3px;
-            text-transform: uppercase;
-            font-weight: 400;
-        }
-
-        .detalle {
-            color: #767677;
-            font-size: 13px;
-        }
-
-        .envio-gratis {
-            font-size: 13px;
-            margin-top: 5px;
-        }
-
-        .texto-header {
-            display: flex;
-            flex-direction: column;
-            margin-left: 20px;
-            text-align: center;
-        }
-    </style>
 </head>
+
+<!--hola-->
+
 <body>
 
-<header class="cabecera">
-    <div class="logo">
-        <img src="../imagenes/logotabas.png" alt="Logo Calzado Shop">
+<!-- Cabecera principal -->
+
+<header class="main-header">
+  <div class="brand-container">
+    <div class="brand-content">
+      <img src="../imagenes mujer/logo.png" alt="Logo" class="logo-img">
+      <div class="brand-text">
+        <h1 class="brand-title">CALZADO.SHOP</h1>
+        <p class="brand-slogan">"calidad para todas las personas"</p>
+      </div>
     </div>
-    <div class="texto-header">
-        <div class="marca"><b>CALZADO.SHOP: URBANOS Y DEPORTIVOS</b></div>
-        <div class="tagline">Conoce todo el catálogo de calzado.shop: zapatillas urabanos con el diseño y tecnología de la mejor calidad</div>
+  </div>
+
+  <!-- Navegación -->
+  <section>
+  <nav class="navbar">
+  <div class="logo"></div>
+  <ul class="nav-links">
+    <article>
+    <li><a href="#quienes">¿QUIÉNES SOMOS?</a></li>
+    </article>
+    <article>
+    <li><a href="calzado.html">CALZADO</a></li>
+    </article>
+    <article>
+    <li><a href="Mujer.html" target="_blank">MUJER</a></li>
+    </article>
+    <article>
+    <li><a href="hombre.html" target="_blank">HOMBRE</a></li>
+    </article>
+    <article>
+    <li><a href="Oferta.html" target="_blank">OFERTAS</a></li>
+    </article>
+    <article>
+    <li><a href="#proximos lanzamientos">PRÓXIMOS LANZAMIENTOS</a></li>
+    </article>
+    <article>
+    <li><a href="#tendencias">TENDENCIAS</a></li>
+    </article>
+  </ul>
+
+  <div class="search-cart-container">
+    <div class="search-box">
+      <input type="text" placeholder="Buscar...">
+      <button>🔍</button>
     </div>
+    
+    <div class="cart-icon">
+      🛒
+      <span class="cart-count">0</span>
+    </div>
+  </div>
+</nav>
+</section>
+
+
 </header>
+ <div class="fondo">
+        <div class="patron"></div>
+        <div class="detalles"></div>
+        <div class="pildoras">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
 
-<main class="contenedor-productos">
+
+
+  <main>
+    <div class="tituloprincipal">
+    <h2>CALZADOS EN STOCK</h2>
+    <P class="descripcion">Zapatillas diseñadas para comodidad y estilos</P>
+    </div>
+    <section class="fila-miniaturas">
+    <div class="miniatura"> 
+            <img src="../imagenes mujer/mujer1.png" alt="Imagen no encontrada">
+            <h3>Zapatilla Nike Urbana</h3>
+            <span>S/160.00</span>
+    </div>
+
+    <div class="miniatura">
+            <img src="../imagenes mujer/mujer2.png" alt="Imagen no encontrada">
+            <h3>Zapatillas Nike Running</h3>
+            <span>S/140.00</span>
+    </div>   
+
+    <div class="miniatura">
+            <img src="../imagenes mujer/mujer3.png" alt="Imagen no encontrada">
+            <h3>Zapatillas Nike Running</h3>
+            <span>s/130.00</span>
+    </div>
+
+    <div class="miniatura">
+            <img src="../imagenes mujer/mujer4.png" alt="Imagen no encontrada">
+            <h3>Zapatillas Nike Urbana</h3>
+            <span>S/120.00</span>
+    </div>
+
+    <div class="miniatura">
+            <img src="../imagenes mujer/mujer5.png" alt="Imagen no encontrada">
+            <h3>Zapatillas Nike Running</h3>
+            <span>S/170.00</span>
+      </div>
+
+    <div class="miniatura">
+      <img src="../imagenes mujer/mujer6.png" alt="Imagen no encontrada">
+      <h3>Zapatillas Puma Running</h3>
+      <span>S/110.00</span>
+    </div>
+
+    <div class="miniatura">
+        <img src="../imagenes mujer/mujer7.png" alt="Imagen no encontrada">
+        <h3>Zapatillas Nike Running</h3>
+        <span>S/120.00</span>
+    </div>
+
+    <div class="miniatura">
+        <img src="../imagenes mujer/mujer8.png" alt="Imagen no encontrada">
+        <h3>Zapatillas Nike Urbana</h3>
+        <span>S/130.00</span>
+    </div>
+
+    <div class="miniatura">
+        <img src="../imagenes mujer/mujer9.png" alt="Imagen no encontrada">
+        <h3>Zapatillas Nike Running</h3>
+        <span>S/160.00</span>
+    </div>
+
+    <div class="miniatura">
+        <img src="../imagenes mujer/mujer10.png" alt="Imagen no encontrada">
+        <h3>Zapatillas Nike Running</h3>
+        <span>S/160.00</span>
+    </div>
+
+    <div class="miniatura">
+        <img src="../imagenes mujer/mujer11.png" alt="Imagen no encontrada">
+        <h3>Zapatillas Adidas Campus Urbana</h3>
+        <span>S/130.00</span>
+    </div>
+
+    <div class="miniatura">
+        <img src="../imagenes mujer/mujer12.png" alt="Imagen no encontrada">
+        <h3>Zapatillas Nike Running</h3>
+        <span>S/120.00</span>
+    </div>
     
-    <div class="tarjeta-producto">
-        <div class="contenedor-imagen">
-            <img src="../imagenes/Zapatillas1.jpeg" alt="Zapatilla 1">
-        </div>
-        <div class="info-producto">
-            <div class="precio">S/ 160</div>
-            <div class="nombre-producto">Zapatilla New Balance Running</div>
-            <div class="detalle">Mujer</div>
-            <div class="detalle">3 colores</div>
-        </div>
+    <div class="miniatura">
+        <img src="../imagenes mujer/mujer13.png" alt="Imagen no encontrada">
+        <h3>Zapatillas Nike Running</h3>
+        <span>S/170.00</span>
     </div>
 
-    <div class="tarjeta-producto">
-        <div class="contenedor-imagen">
-            <img src="../imagenes/zapatilla8.jpeg" alt="Zapatilla 2">
-        </div>
-        <div class="info-producto">
-            <div class="precio">S/ 429</div>
-            <div class="nombre-producto">Zapatillas Yordan white</div>
-            <div class="detalle">Originals</div>
-            <div class="detalle">3 colores</div>
-        </div>
+    <div class="miniatura">
+        <img src="../imagenes mujer/mujer14.png" alt="Imagen no encontrada">
+        <h3>Zapatillas Nike Urbana</h3>
+        <span>S/150.00</span>
     </div>
 
-    <div class="tarjeta-producto">
-        <div class="contenedor-imagen">
-            <img src="../imagenes/zapatilla9.jpeg" alt="Zapatilla 3">
-        </div>
-        <div class="info-producto">
-            <div class="precio">S/ 359</div>
-            <div class="nombre-producto">Zapatilla Yordan Red</div>
-            <div class="detalle">Originals</div>
-            <div class="envio-gratis">Envío gratis</div>
-        </div>
+    <div class="miniatura">
+        <img src="../imagenes mujer/mujer15.png" alt="Imagen no encontrada">
+        <h3>Zapatillas Adidas Urbanas</h3>
+        <span>S/150.00</span>
     </div>
 
-    <div class="tarjeta-producto">
-        <div class="contenedor-imagen">
-            <img src="../imagenes/Zapatillas3.jpeg" alt="Zapatilla 4">
-        </div>
-        <div class="info-producto">
-            <div class="precio">S/130</div>
-            <div class="nombre-producto">Zapatillas New Balance Running</div>
-            <div class="detalle">mujer</div>
-            <div class="envio-gratis">Envío gratis</div>
-        </div>
+    <div class="miniatura">
+        <img src="../imagenes mujer/mujer16.png" alt="Imagen no encontrada">
+        <h3>Zapatillas Puma Running</h3>
+        <span>S/130.00</span>
     </div>
+
+    <!--ZAPATILLAS DE PUROS HOMBRES-->
+
+    <div class="miniatura">
+        <img src="../imagenes hombre/hombre1.jpg" alt="Imagen no encontrada">
+        <h3>Zapatillas Puma Zuede XL</h3>
+        <span>S/130.00</span>
+    </div>
+
+    <div class="miniatura">
+        <img src="../imagenes hombre/hombre2.jpg" alt="Imagen no encontrada">
+        <h3>Zapatillas Puma Zuede XL</h3>
+        <span>S/130.00</span>
+    </div>
+
+     <div class="miniatura">
+        <img src="../imagenes hombre/hombre3.jpg" alt="Imagen no encontrada">
+        <h3>Zapatillas Puma Zuede XL</h3>
+        <span>S/130.00</span>
+    </div>
+
+    <div class="miniatura">
+        <img src="../imagenes hombre/hombre4.jpg" alt="Imagen no encontrada">
+        <h3>Zapatillas Puma Running</h3>
+        <span>S/130.00</span>
+    </div>
+
+     <div class="miniatura">
+        <img src="../imagenes hombre/hombre5.jpg" alt="Imagen no encontrada">
+        <h3>Zapatillas DC SHOES</h3>
+        <span>S/130.00</span>
+    </div>
+
+     <div class="miniatura">
+        <img src="../imagenes hombre/hombre6.jpg" alt="Imagen no encontrada">
+        <h3>Zapatillas DC Shoes</h3>
+        <span>S/130.00</span>
+    </div>
+
+    <div class="miniatura">
+      <img src="../imagenes hombre/hombre7.jpg" alt="Imagen no encontrada">
+      <h3>Zapatillas DC Shoes</h3>
+      <span>S/130.00</span>
+    </div>
+
+    <div class="miniatura">
+      <img src="../imagenes hombre/hombre8.jpg" alt="Imagen no encontrada">
+      <h3>Zapatillas DC Shoes</h3>
+      <span>S/130.00</span>
+    </div>
+
+    <div class="miniatura">
+      <img src="../imagenes hombre/hombre9.jpg" alt="Imagen no encontrada">
+      <h3>Zapatillas Adidas Campus</h3>
+      <span>S/130.00</span>
+    </div>
+
+    <div class="miniatura">
+      <img src="../imagenes hombre/hombre10.jpg" alt="Imagen no encontrada">
+      <h3>Zapatillas Adidas Campus</h3>
+      <span>S/130.00</span>
+    </div>
+
+    <div class="miniatura">
+      <img src="../imagenes hombre/hombre11.jpg" alt="Imagen no encontrada">
+      <h3>Zapatillas Adidas Campus</h3>
+      <span>S/130.00</span>
+    </div>
+
+    <div class="miniatura">
+      <img src="../imagenes hombre/hombre12.jpg" alt="Imagen no encontrada">
+      <h3>Zapatillas Adidas Campus</h3>
+      <span>S/130.00</span>
+    </div>
+
+     <div class="miniatura">
+      <img src="../imagenes hombre/hombre13.jpg" alt="Imagen no encontrada">
+      <h3>Zapatillas Adidas Campus</h3>
+      <span>S/130.00</span>
+    </div>
+
+    <div class="miniatura">
+      <img src="../imagenes hombre/hombre14.jpg" alt="Imagen no encontrada">
+      <h3>Zapatillas Puma Running</h3>
+      <span>S/130.00</span>
+    </div>
+
+    <div class="miniatura">
+      <img src="../imagenes hombre/hombre15.jpg" alt="Imagen no encontrada">
+      <h3>Zapatillas Puma Negra</h3>
+      <span>S/130.00</span>
+    </div>
+
+    <div class="miniatura">
+      <img src="../imagenes hombre/hombre16.jpg" alt="Imagen no encontrada">
+      <h3>Zapatillas Puma Blanco  </h3>
+      <span>S/130.00</span>
+    </div>
+   </section>
+
+
+   <section class="historia-negra">
+  <h2>Calzado.Shop · Historia y Legado</h2>
+
+  <p>
+    Calzado.Shop nace con una visión clara: ofrecer calzado moderno,
+    cómodo y accesible para todas las personas. Desde nuestros inicios,
+    creemos que un buen par de zapatillas no solo acompaña tu camino,
+    sino que define tu estilo y actitud.
+  </p>
+
+  <p>
+    Inspirados en la cultura urbana, el deporte y las nuevas tendencias,
+    trabajamos día a día para traer modelos que combinan calidad,
+    diseño y rendimiento. Nuestro compromiso es acompañarte en cada
+    paso, ya sea en la calle, el trabajo o el entrenamiento.
+  </p>
+
+  <p>
+    Más que una tienda, somos una comunidad que camina hacia adelante,
+    marcando huella con cada paso.
+  </p>
+</section>
+
     </main>
-<main class="contenedor-productos">
-
-    <div class="tarjeta-producto">
-        <div class="contenedor-imagen">
-            <img src="../imagenes/zapatillas5.jpeg" alt="Zapatilla 1">
-        </div>
-        <div class="info-producto">
-            <div class="precio">S/ 160</div>
-            <div class="nombre-producto">Zapatilla nike</div>
-            <div class="detalle">hombre</div>
-            <div class="detalle">3 colores</div>
-        </div>
-    </div>
-
-    <div class="tarjeta-producto">
-        <div class="contenedor-imagen">
-            <img src="../imagenes/Zapatillas2.jpeg" alt="Zapatilla 2">
-        </div>
-        <div class="info-producto">
-            <div class="precio">S/ 150</div>
-            <div class="nombre-producto">Zapatilla nike</div>
-            <div class="detalle">mujer</div>
-            <div class="detalle">3 colores</div>
-        </div>
-    </div>
-
-    <div class="tarjeta-producto">
-        <div class="contenedor-imagen">
-            <img src="../imagenes/zapatilla10.jpeg" alt="Zapatilla 3">
-        </div>
-        <div class="info-producto">
-            <div class="precio">S/200</div>
-            <div class="nombre-producto">Zapatilla adidas campus    </div>
-            <div class="detalle">Originals</div>
-            <div class="envio-gratis">Envío gratis</div>
-        </div>
-    </div>  
-
-    <div class="tarjeta-producto">
-        <div class="contenedor-imagen">
-            <img src="../imagenes/zapatillas6.jpeg" alt="Zapatilla 4">
-        </div>
-        <div class="info-producto">
-            <div class="precio">S/140</div>
-            <div class="nombre-producto">Zapatillas New Balance white</div>
-            <div class="detalle">hombre</div>
-            <div class="envio-gratis">Envío gratis</div>
-        </div>
-    </div>
-    </main>
-    
-
+<div>    
+<footer>
+    <p>©2026 Información sobre Calzado Shop</p>
+    <p>Todos los derechos reservados</p>
+    <p>libro de reclamaciones</p>
+</footer>
+</div>
+  
 </body>
+
+  
+
 </html>
-
-
