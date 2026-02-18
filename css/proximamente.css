@@ -440,6 +440,30 @@
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
   }
 
+.proxi {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #e53935;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 6px;
+    text-transform: uppercase;
+}
+
+.lanzamiento {
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+}
+
+.lanzamiento span {
+    font-weight: bold;
+    color: #111;
+}
+
   .miniatura img {
       width: 100%;
       height: 220px;   /* más horizontal */
