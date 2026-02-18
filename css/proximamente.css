@@ -420,25 +420,54 @@
    
 
     
-   
-   
-   
-    .fila-miniaturas {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 por fila */
-    gap: 30px;
-    padding: 40px 5%;
+   .fila-miniaturas {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
 }
 
-       .miniatura {
-    background: #ffffff;
-    border-radius: 18px;
-    padding: 20px;
+.miniatura {
+    width: 220px;
+    background-color: #f3f3f3;
+    border-radius: 15px;
+    padding: 15px;
     text-align: center;
-    transition: all 0.4s ease;
-    cursor: pointer;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-  }
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3 ease;
+    margin-bottom: 40px;
+}
+
+.miniatura img {
+    width: 100%;
+    border-radius: 12px;
+
+}
+
+.miniatura :hover {
+    transform: translateY(-6px);
+}
+.miniatura h3 {
+    font-size: 16px;
+    margin: 10px 0 5px;
+}
+.miniatura p {
+    font-size: 16px;
+    color: #555;
+}
+
+.miniatura span {
+    font-weight: bold;
+    font-size: 16px;
+    display: block;
+    margin-top: 5px;
+}
+
+
+   
+   
+ 
+      
 
 .proxi {
     position: absolute;
@@ -464,34 +493,7 @@
     color: #111;
 }
 
-  .miniatura img {
-      width: 100%;
-      height: 220px;   /* más horizontal */
-      object-fit: cover;
-      border-radius: 15px;
-      transition: transform 0.4s ease;
-  }
-
-
-        .miniatura:hover {
-        transform: translateY(-6px);
-        }
-        .miniatura h3 {
-        font-size: 16px;
-        margin: 10px 0 5px;
-        }
-        .miniatura p {
-        font-size: 16px;
-        color: #555;
-        }
-
-        .miniatura span {
-        font-weight: bold;
-        font-size: 16px;
-        display: block;
-        margin-top: 5px;
-        }
-
+  
         .tituloprincipal h2 {
             text-align: center;
             color: white;
@@ -507,28 +509,25 @@
         }
 
         .historia-negra {
-        background: #f5f5f5;
-        color: black;
-        padding: 70px 20px;
-        text-align: center;
+            background: #000;
+            color: #fff;
+            padding: 70px 20px;
+            text-align: center;
         }
 
         .historia-negra h2 {
-        font-size: 28px;
-        margin-bottom: 30px;
-        letter-spacing: 1px;
+            font-size: 28px;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
         }
 
         .historia-negra p {
-        max-width: 900px;
-        margin: 0 auto 18px;
-        line-height: 1.8;
-        font-size: 16px;
-        color: black;
-        font-weight: bold;
+            max-width: 900px;
+            margin: 0 auto 18px;
+            line-height: 1.8;
+            font-size: 16px;
+            color: #e0e0e0;
         }
-
-        
 
         footer {
         background: #111;

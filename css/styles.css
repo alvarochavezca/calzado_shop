@@ -417,7 +417,7 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/* CABECERA: logo y buscador */
+/* CABECERA: logo */
 .cabecera {
     display: flex;
     align-items: center;
@@ -645,23 +645,21 @@ footer span {
 }
 
 .contenedor {
-    display: flex;
     position: absolute;
-    left: 0;
-    top: 600px; /* ajusta según tu header */
-    width: 250px;
-    background-color: #f5f5f5;
-    padding: 20px;
-    border-radius: 20px;
-    font-size: 20px;
-    font-weight: bold;
-
+    left: 30px;
+    top: 750px; /* ajusta según altura real */
 }
 
 aside {
-    width: 250px;
-    background-color: #f5f5f5;
-    padding: 20px;
+    width: 280px;
+    background: #1e293b; /* azul oscuro elegante */
+    color: #ffffff;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    font-size: 15px;
+    line-height: 1.6;
+    border: 1px solid rgba(255,255,255,0.05);
 }
 
 
