@@ -644,6 +644,26 @@ footer span {
     margin: 4px 0;
 }
 
+.contenedor {
+    display: flex;
+    position: absolute;
+    left: 0;
+    top: 600px; /* ajusta según tu header */
+    width: 250px;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 20px;
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+aside {
+    width: 250px;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
 
 
 
