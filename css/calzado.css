@@ -409,10 +409,12 @@ header p {
 }
 
 .fila-miniaturas {
-    display: flex;
-    justify-content: center;
-    gap: 25px;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto 60px;
 }
 
 .miniatura {
@@ -432,7 +434,7 @@ header p {
 
 }
 
-.miniatura :hover {
+.miniatura:hover {
     transform: translateY(-6px);
 }
 .miniatura h3 {
@@ -450,7 +452,6 @@ header p {
     display: block;
     margin-top: 5px;
 }
-
 
 
 
