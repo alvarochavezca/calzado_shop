@@ -507,3 +507,20 @@ footer span {
   color: #ccc;
 }
 
+.contenedor {
+    position: absolute;
+    left: 30px;
+    top: 750px; /* ajusta según altura real */
+}
+aside {
+    width: 280px;
+    background: #1e293b; /* azul oscuro elegante */
+    color: #ffffff;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    font-size: 15px;
+    line-height: 1.6;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
