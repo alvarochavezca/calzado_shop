@@ -271,23 +271,25 @@
 }
 
 
-
-
-.patron {
-  position: absolute;
-  inset: 0;
-  background-image: radial-gradient(#ffffff22 1px, transparent 1px);
-  background-size: 22px 22px;
-  z-index: 1;
-}
-
 .detalles {
   position: absolute;
   inset: 0;
+  z-index: 2;
+  pointer-events: none; /* Crucial: permite que el clic pase a través */
   background-image:
       linear-gradient(120deg, transparent 85%, #ff2f9222 90%),
       linear-gradient(-120deg, transparent 85%, #6b4bff22 90%);
 }
+
+.patron {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none; /* Crucial: permite que el clic pase a través */
+  background-image: radial-gradient(#ffffff22 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
 
 .contenido {
   position: relative;
@@ -557,11 +559,47 @@ aside {
     border: 1px solid rgba(255,255,255,0.05);
 }
 
+/* Estilo específico para el número de WhatsApp */
+.contenedor2 aside ul li a {
+    color: #25d366;           /* Verde oficial de WhatsApp */
+    text-decoration: none;    /* Quita el subrayado aburrido */
+    font-weight: bold;        /* Lo hace más grueso */
+    font-size: 1.1rem;        /* Lo agranda un poquito */
+    transition: 0.3s;         /* Suaviza el cambio de color */
+}
+
+/* Efecto al pasar el mouse (Hover) */
+.contenedor2 aside ul li a:hover {
+    color: #34f57c;           /* Un verde aún más claro al tocarlo */
+    text-shadow: 0 0 10px rgba(37, 211, 102, 0.5); /* Resplandor verde */
+    text-decoration: underline; /* Aparece el subrayado solo al tocarlo */
+}
 .contenedor2 {
     position: absolute;
     right: 15px;
     top: 750px; /* ajusta según altura real */
     float: right;
+}
+
+.contenedor2 {
+    position: absolute;
+    right: 15px;
+    top: 750px;
+    z-index: 9999 !important; /* Mantenlo así de alto */
+    pointer-events: auto;     /* Asegura que el contenedor sí reciba clics */
+}
+
+.mapa-contenedor {
+    position: relative;
+    z-index: 10000;
+    pointer-events: auto !important; 
+    border-radius: 10px;
+    overflow: hidden; /* Corta las esquinas del iframe para que respete el radius */
+}
+
+/* Asegúrate de que el iframe no herede restricciones */
+iframe {
+    pointer-events: auto !important;
 }
 
 /* --- MODAL STYLE --- */
@@ -638,3 +676,52 @@ aside {
 
 .cart-count { transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
 /* Y en JS podrías hacer que el contador escale un poco */
+
+.img-grande {
+    width: 100%;
+    max-height: 200px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.tallas-flex {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px 0;
+    flex-wrap: wrap;
+}
+
+.btn-talla {
+    border: 1px solid #444;
+    background: transparent;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-talla.active {
+    background: #00d4ff;
+    border-color: #00d4ff;
+    color: black;
+    font-weight: bold;
+}
+
+.selector-talla p {
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* Centrar el botón de confirmación en el modal */
+#confirmarAgregar {
+    display: block;      /* Lo convertimos en bloque para usar margin auto */
+    margin: 20px auto;   /* 20px arriba/abajo y centrado a los lados */
+    width: 80%;          /* Le damos un ancho definido para que no ocupe todo */
+    max-width: 250px;    /* Pero que no se vea gigante en pantallas grandes */
+    border: none;
+    cursor: pointer;
+}
+
+
