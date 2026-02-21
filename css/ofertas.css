@@ -473,6 +473,18 @@ header p {
     cursor: pointer;
 }
 
+.btn-eliminar {
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 15px;
+    transition: 0.2s;
+}
+
+.btn-eliminar:hover {
+    transform: scale(1.2);
+    color: red;
+}
+
 .marcas {
     text-align: center;
     width: 90%;

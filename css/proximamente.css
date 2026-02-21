@@ -558,3 +558,64 @@
         grid-template-columns: repeat(1, 250px);
     }
 }
+
+.contenedor {
+    position: absolute;
+    left: 5px;
+    top: 750px; /* ajusta según altura real */
+}
+
+aside {
+    width: 280px;
+    background: #1e293b; /* azul oscuro elegante */
+    color: #ffffff;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    font-size: 15px;
+    line-height: 1.6;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+/* Estilo específico para el número de WhatsApp */
+.contenedor2 aside ul li a {
+    color: #25d366;           /* Verde oficial de WhatsApp */
+    text-decoration: none;    /* Quita el subrayado aburrido */
+    font-weight: bold;        /* Lo hace más grueso */
+    font-size: 1.1rem;        /* Lo agranda un poquito */
+    transition: 0.3s;         /* Suaviza el cambio de color */
+}
+
+/* Efecto al pasar el mouse (Hover) */
+.contenedor2 aside ul li a:hover {
+    color: #34f57c;           /* Un verde aún más claro al tocarlo */
+    text-shadow: 0 0 10px rgba(37, 211, 102, 0.5); /* Resplandor verde */
+    text-decoration: underline; /* Aparece el subrayado solo al tocarlo */
+}
+.contenedor2 {
+    position: absolute;
+    right: 15px;
+    top: 750px; /* ajusta según altura real */
+    float: right;
+}
+
+.contenedor2 {
+    position: absolute;
+    right: 15px;
+    top: 750px;
+    z-index: 9999 !important; /* Mantenlo así de alto */
+    pointer-events: auto;     /* Asegura que el contenedor sí reciba clics */
+}
+
+.mapa-contenedor {
+    position: relative;
+    z-index: 10000;
+    pointer-events: auto !important; 
+    border-radius: 10px;
+    overflow: hidden; /* Corta las esquinas del iframe para que respete el radius */
+}
+
+/* Asegúrate de que el iframe no herede restricciones */
+iframe {
+    pointer-events: auto !important;
+}

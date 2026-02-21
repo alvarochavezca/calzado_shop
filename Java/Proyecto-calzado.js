@@ -5,6 +5,23 @@ document.addEventListener("DOMContentLoaded", function () {
     let botones = document.querySelectorAll(".btn-agregar");
     let productoTemporal = null; // Para guardar el producto mientras eliges talla
 
+    document.getElementById("listaProductos").addEventListener("click", function(e){
+
+    let boton = e.target.closest(".btn-eliminar");
+
+        if(boton){
+
+            let index = boton.getAttribute("data-index");
+
+            carrito.splice(index, 1);
+
+            actualizarContador();
+
+            iconoCarrito.onclick(); // vuelve a renderizar
+        }
+
+    });
+
     // Función para abrir el modal principal (Carrito/Mensajes)
     function abrirModal(contenido, esMensajeSimple = false) {
         const modal = document.getElementById("miModalCarrito");
@@ -99,14 +116,16 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         let listaHTML = '<div class="carrito-listado">';
-        carrito.forEach(function (item) {
+        carrito.forEach(function (item, index) {
             listaHTML += `
                 <div class="item-carrito">
                     <img src="${item.imagen}" class="img-mini">
+
                     <div class="info-item">
                         <p class="nom">${item.nombre}</p>
                         <p class="det">${item.precio} | Talla: ${item.talla} | Cant: ${item.cantidad}</p>
                     </div>
+                    <button class="btn-eliminar" data-index="${index}">🗑</button>
                 </div>`;
         });
         listaHTML += "</div>";
