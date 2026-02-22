@@ -1,3 +1,5 @@
+
+
 * {
 margin: 0;
 padding: 0;
@@ -263,20 +265,25 @@ padding: 40px 15px;
 
 
 
+/* Busca estas clases y cámbialas así: */
 .patron {
-    position: absolute;
-    inset: 0;
-    background-image: radial-gradient(#ffffff22 1px, transparent 1px);
-    background-size: 22px 22px;
-    z-index: 1;
+    z-index: 1; /* Fondo base */
 }
 
 .detalles {
-    position: absolute;
-    inset: 0;
-    background-image:
-    linear-gradient(120deg, transparent 85%, #ff2f9222 90%),
-    linear-gradient(-120deg, transparent 85%, #6b4bff22 90%);
+    z-index: 2; /* Capas de colores */
+}
+
+.pildoras {
+    z-index: 3; /* Animación de burbujas */
+    pointer-events: none; /* ESTO ES CLAVE: permite que el clic pase a través */
+}
+
+/* Agrega esto al final de tu CSS para blindar el footer */
+footer, .main-footer {
+    position: relative !important;
+    z-index: 9999 !important; /* Por encima de todo */
+    pointer-events: auto !important; /* Obliga a que reciba clics */
 }
 
 .contenido {
@@ -308,31 +315,15 @@ padding: 40px 15px;
     position: relative;
 }
 
-.detalles {
+.patron, .detalles, .pildoras {
     position: absolute;
     inset: 0;
-    z-index: 2;
-}    
-
-.patron {
-    position: absolute;
-    inset: 0;
-    z-index: 1;
+    pointer-events: none; /* Fundamental para poder hacer clic en lo que esté atrás */
 }
 
-
-
-.pildoras {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    inset: 0;
-    z-index: 3; 
-    pointer-events: none;
-}
+.patron { z-index: 1; }
+.detalles { z-index: 2; }
+.pildoras { z-index: 3; }
 
 .pildoras span {
     position: absolute;
@@ -428,36 +419,62 @@ body {
 }
 
 
-
-
-
-/*SECCIÓN DESTACADAS*/
-
-.hero {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 20px;
-    margin: 40px auto;
-    max-width: 1200px;
+/* --- SLIDER IMPACTO TOTAL (4 IMÁGENES) --- */
+.slider-container.full-width {
+    width: 100vw; 
+    /* Fuerza el ancho total aunque esté dentro de un contenedor con márgenes */
+    margin-left: calc(-50vw + 50%); 
+    
+    /* ALTURA AUMENTADA: Ocupa el 85% de la altura de la pantalla */
+    height: 85vh; 
+    min-height: 550px; 
+    
+    overflow: hidden;
+    position: relative;
+    z-index: 5;
+    background-color: #000; /* Fondo negro por si la imagen tarda en cargar */
 }
 
-.hero img {
+.slider-track {
+    display: flex;
+    /* IMPORTANTE: 400% porque ahora tienes 4 imágenes */
+    width: 400%; 
+    height: 100%;
+    /* 20 segundos total: 5 segundos para cada una de las 4 imágenes */
+    animation: scrollSlider4 20s infinite ease-in-out;
+}
+
+.slide {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    border-radius: 14px;
 }
 
-/* Imagen grande */
-.hero-grande {
-    height: 420px;
+.slide img {
+    width: 100%;
+    height: 100%;
+    /* 'cover' para que no queden huecos blancos, 'top' para no cortar cabezas si hay personas */
+    object-fit: cover; 
+    object-position: center; 
 }
 
-/* Imagen chica */
-.hero-chica {
-    height: 420px;
+/* Animación sincronizada para 4 imágenes */
+@keyframes scrollSlider4 {
+    /* Imagen 1 */
+    0%, 20% { transform: translateX(0); }             
+    /* Transición 1 a 2 */
+    25%, 45% { transform: translateX(-25%); }         
+    /* Transición 2 a 3 */
+    50%, 70% { transform: translateX(-50%); }         
+    /* Transición 3 a 4 */
+    75%, 95% { transform: translateX(-75%); }         
+    /* Regreso al inicio */
+    100% { transform: translateX(0); }                
 }
 
+/* Ajuste preventivo para evitar scroll horizontal en la web */
+body {
+    overflow-x: hidden;
+}
 
 
 
@@ -593,6 +610,19 @@ footer span {
     color: #ccc;
 }
 
+footer.main-footer {
+    position: relative !important;
+    z-index: 9999 !important; /* Más alto que las píldoras y el fondo */
+    background: #111;
+    pointer-events: auto !important; /* Obliga a que los clics funcionen aquí */
+}
+
+footer.main-footer a.btn {
+    cursor: pointer !important;
+    position: relative;
+    z-index: 10000; /* Un poco más que el footer mismo */
+}
+
 /* UTILIDADES*/
 .u-text-center { text-align: center; }
 .u-hidden { display: none; }
@@ -663,7 +693,7 @@ footer span {
 }
 
 .contenedor {
-    position: absolute;
+    position: sticky;
     left: 5px;
     top: 750px; /* ajusta según altura real */
 }
@@ -695,19 +725,15 @@ aside {
     text-shadow: 0 0 10px rgba(37, 211, 102, 0.5); /* Resplandor verde */
     text-decoration: underline; /* Aparece el subrayado solo al tocarlo */
 }
-.contenedor2 {
-    position: absolute;
-    right: 15px;
-    top: 750px; /* ajusta según altura real */
-    float: right;
-}
+
 
 .contenedor2 {
     position: absolute;
     right: 15px;
-    top: 750px;
+    top: 1100px;
     z-index: 9999 !important; /* Mantenlo así de alto */
     pointer-events: auto;     /* Asegura que el contenedor sí reciba clics */
+    float: right;
 }
 
 .mapa-contenedor {
@@ -843,4 +869,27 @@ iframe {
     max-width: 250px;    /* Pero que no se vea gigante en pantallas grandes */
     border: none;
     cursor: pointer;
+}
+
+/* --- BOTÓN LIBRO DE RECLAMACIONES --- */
+.main-footer .btn-outline-light {
+    display: inline-block;
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 12px 25px;
+    border-radius: 50px; /* Bordes redondeados modernos */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    letter-spacing: 1px;
+}
+
+.main-footer .btn-outline-light:hover {
+    background-color: #ffffff;
+    color: #000000;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
 }
