@@ -420,7 +420,7 @@
    
 
     
-   .fila-miniaturas {
+.fila-miniaturas {
     display: grid;
     grid-template-columns: repeat(4, 250px);
     justify-content: center;
