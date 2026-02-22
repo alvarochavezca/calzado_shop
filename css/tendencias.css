@@ -244,29 +244,22 @@
     color: #666;
 }
 
-/* --- CAPAS DE FONDO Y ANIMACIONES (PÍLDORAS) --- */
-/* Jerarquía de capas de fondo */
 .patron {
-    z-index: 1; /* Fondo base */
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(#ffffff22 1px, transparent 1px);
+    background-size: 22px 22px;
+    z-index: 1;
 }
 
 .detalles {
-    z-index: 2; /* Capas de colores */
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(120deg, transparent 85%, #ff2f9222 90%),
+      linear-gradient(-120deg, transparent 85%, #6b4bff22 90%);
 }
 
-.pildoras {
-    z-index: 3; /* Animación de burbujas */
-    pointer-events: none; /* Permite clics a través de la animación */
-}
-
-/* Blindaje para que el footer siempre esté arriba y sea clicable */
-footer, .main-footer {
-    position: relative !important;
-    z-index: 9999 !important; 
-    pointer-events: auto !important; 
-}
-
-/* Contenedor de texto sobre el fondo animado */
 .contenido {
     position: relative;
     z-index: 1;
@@ -288,7 +281,6 @@ footer, .main-footer {
     opacity: 0.85;
 }
 
-/* Configuración del lienzo de fondo */
 .fondo {
     margin: 0;
     min-height: 100vh;
@@ -297,17 +289,31 @@ footer, .main-footer {
     position: relative;
 }
 
-.patron, .detalles, .pildoras {
+.detalles {
     position: absolute;
     inset: 0;
+    z-index: 2;
+}    
+
+.patron {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+/* --- PÍLDORAS ANIMADAS (ANIMACIÓN) --- */
+.pildoras {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    inset: 0;
+    z-index: 3; 
     pointer-events: none;
 }
 
-.patron { z-index: 1; }
-.detalles { z-index: 2; }
-.pildoras { z-index: 3; }
-
-/* Estilo individual de las píldoras animadas */
 .pildoras span {
     position: absolute;
     bottom: -100px;
@@ -320,30 +326,26 @@ footer, .main-footer {
 }
 
 .contenido {
-    z-index: 4; /* Texto por encima de las píldoras */
+    position: relative;
+    z-index: 4;
 }
 
-/* Animación de movimiento ascendente */
 @keyframes subir {
-    0% {
-        transform: translateY(0) rotate(0deg);
-        opacity: 0;
-    }
-    50% {
-        opacity: 0.8;
-    }
-    100% {
-        transform: translateY(-110vh) rotate(360deg);
-        opacity: 0;
-    }
+    0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+    50% { opacity: 0.8; }
+    100% { transform: translateY(-110vh) rotate(360deg); opacity: 0; }
 }
 
-/* Variaciones de posición y velocidad para las píldoras */
+/* Posiciones de las píldoras */
 .pildoras span:nth-child(1) { left: 10%; animation-duration: 12s; }
 .pildoras span:nth-child(2) { left: 30%; width: 20px; height: 40px; animation-duration: 8s; }
 .pildoras span:nth-child(3) { left: 50%; animation-duration: 15s; }
 .pildoras span:nth-child(4) { left: 70%; width: 25px; height: 50px; animation-duration: 10s; }
 .pildoras span:nth-child(5) { left: 90%; animation-duration: 18s; }
+
+header img { width: 80px; }
+header h1 { font-size: 1.8rem; }
+header p { font-size: 0.9rem; color: #666; }
 
 /* --- AJUSTES DE CABECERA Y BODY --- */
 header img { width: 80px; }
