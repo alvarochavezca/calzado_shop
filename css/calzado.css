@@ -1,105 +1,98 @@
+/* --- CONFIGURACIÓN GLOBAL --- 
+   Define estilos base para todos los elementos y resetea márgenes. */
 * {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-/* TABLET */
-
+/* --- DISEÑO RESPONSIVO: TABLET --- 
+   Ajustes para pantallas medianas (hasta 1024px). */
 @media (max-width: 1024px) {
 
+    /* Navbar en tablets */
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
 
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 
+    /* Marca superior en tablets */
+    .brand-content {
+        flex-direction: column;
+        text-align: center;
+    }
 
-/* Navbar */
-.navbar {
-flex-direction: column;
-gap: 15px;
-}
+    .brand-title {
+        font-size: 2rem;
+    }
 
-.nav-links {
-flex-wrap: wrap;
-justify-content: center;
-}
+    /* Miniaturas de productos en tablets */
+    .miniatura {
+        width: 45%;
+    }
 
-/* Marca superior */
-.brand-content {
-flex-direction: column;
-text-align: center;
-}
-
-.brand-title {
-font-size: 2rem;
-}
-
-/* Miniaturas */
-.miniatura {
-width: 45%;
-}
-
-
-.contenido h1 {
-font-size: 2.2rem;
-}
+    .contenido h1 {
+        font-size: 2.2rem;
+    }
 
 }
 
-
-
-/* CELULAR */
-
+/* --- DISEÑO RESPONSIVO: CELULAR --- 
+   Ajustes para pantallas pequeñas (hasta 600px). */
 @media (max-width: 600px) {
 
+    .navbar {
+        flex-direction: column;
+        padding: 1rem 3%;
+    }
 
-.navbar {
-flex-direction: column;
-padding: 1rem 3%;
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .search-cart-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Marca en celular */
+    .brand-title {
+        font-size: 1.6rem;
+    }
+
+    .brand-slogan {
+        font-size: 0.9rem;
+    }
+
+    .miniatura {
+        width: 100%;
+    }
+
+    /* Hero o título principal en celular */
+    .contenido h1 {
+        font-size: 1.6rem;
+    }
+
+    .contenido p {
+        font-size: 0.9rem;
+    }
+
+    /* Sección de historia en celular */
+    .historia-negra {
+        padding: 40px 15px;
+    }
 }
 
-.nav-links {
-flex-direction: column;
-align-items: center;
-gap: 10px;
-}
-
-.search-cart-container {
-flex-direction: column;
-gap: 10px;
-}
-
-/* Marca */
-.brand-title {
-font-size: 1.6rem;
-}
-
-.brand-slogan {
-font-size: 0.9rem;
-}
-
-
-.miniatura {
-width: 100%;
-}
-
-/* Hero */
-.contenido h1 {
-font-size: 1.6rem;
-}
-
-.contenido p {
-font-size: 0.9rem;
-}
-
-/* Historia */
-.historia-negra {
-padding: 40px 15px;
-}
-}
-
-
-
-/* Contenedor Superior */
+/* --- CONTENEDOR DE MARCA (BRANDING) --- 
+   Estilos para el área del logo y el título principal superior. */
 .brand-container {
     background-color: #f5f5f5; 
     padding: 20px 0;
@@ -140,18 +133,14 @@ padding: 40px 15px;
     margin-top: 5px;
 }
 
-
-
-
-
-
-/*NAVEGACION*/
-
+/* --- NAVEGACIÓN (NAVBAR) --- 
+   Estilos de la barra negra y efectos de los enlaces. */
 .nav-links a {
     position: relative;
     text-decoration: none;
 }
 
+/* Línea animada que aparece bajo los links al pasar el mouse */
 .nav-links a::after {
     content: "";
     position: absolute;
@@ -167,7 +156,6 @@ padding: 40px 15px;
     width: 100%;
 }
 
-
 .navbar {
     background-color: #000000; 
     color: #ffffff; 
@@ -182,7 +170,6 @@ padding: 40px 15px;
     list-style: none;
     display: flex;
     gap: 20px;
-
 }
 
 .nav-links a {
@@ -190,16 +177,14 @@ padding: 40px 15px;
     text-decoration: none;
     transition: color 0.3s;
     font-weight: bold;
-
 }
 
 .nav-links a:hover {
     color: #00d4ff; 
 }
 
-
-
-/*BUSQUEDA (SEARCH)*/
+/* --- BÚSQUEDA Y CARRITO (SEARCH) --- 
+   Caja de búsqueda y contador rojo del carrito. */
 .search-cart-container {
     display: flex;
     align-items: center;
@@ -237,13 +222,11 @@ padding: 40px 15px;
     right: -10px;
 }
 
-
-/*Logo y texto*/
+/* --- LOGOTIPO Y TEXTOS ADICIONALES --- */
 .logo {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-
 }
 
 .logo img {
@@ -252,13 +235,10 @@ padding: 40px 15px;
     display: flex;
 }
 
-
-
 .logo h1 {
     margin: 0;
     font-size: 32px;
     letter-spacing: 2px;
-
 }
 
 .slogan {
@@ -266,13 +246,15 @@ padding: 40px 15px;
     color: #666;
 }
 
+/* --- EFECTOS DE FONDO (FONDO DINÁMICO) --- 
+   Controla el patrón de puntos, los colores de fondo y las animaciones. */
 .patron {
     position: absolute;
     inset: 0;
     background-image: radial-gradient(#ffffff22 1px, transparent 1px);
     background-size: 22px 22px;
     z-index: 1;
-  }
+}
 
 .detalles {
     position: absolute;
@@ -280,7 +262,7 @@ padding: 40px 15px;
     background-image:
         linear-gradient(120deg, transparent 85%, #ff2f9222 90%),
         linear-gradient(-120deg, transparent 85%, #6b4bff22 90%);
-  }
+}
 
 .contenido {
     position: relative;
@@ -292,16 +274,16 @@ padding: 40px 15px;
     align-items: center;
     text-align: center;
     color: white;
-  }
+}
 
 .contenido h1 {
     font-size: 3rem;
-  }
+}
 
 .contenido p {
     margin-top: 10px;
     opacity: 0.85;
-  }
+}
 
 .fondo {
     margin: 0;
@@ -309,7 +291,7 @@ padding: 40px 15px;
     background: #0f172a; 
     overflow: hidden; 
     position: relative;
-  }
+}
 
 .detalles {
     position: absolute;
@@ -323,7 +305,7 @@ padding: 40px 15px;
     z-index: 1;
 }
 
-
+/* Animación de las "píldoras" rojas que suben */
 .pildoras {
     position: absolute;
     width: 100%;
@@ -366,6 +348,7 @@ padding: 40px 15px;
   }
 }
 
+/* Configuración individual para cada píldora animada */
 .pildoras span:nth-child(1) {
     left: 10%;
     animation-duration: 12s;
@@ -395,7 +378,6 @@ padding: 40px 15px;
     animation-duration: 18s;
 }
 
-
 header img {
     width: 80px;
 }
@@ -409,8 +391,8 @@ header p {
     color: #666;
 }
 
-
-
+/* --- GRID DE PRODUCTOS (CATÁLOGO) --- 
+   Organiza las tarjetas de zapatillas en filas y columnas. */
 .fila-miniaturas {
     display: grid;
     grid-template-columns: repeat(4, 250px);
@@ -433,16 +415,17 @@ header p {
 .miniatura img {
     width: 100%;
     border-radius: 12px;
-
 }
 
 .miniatura :hover {
     transform: translateY(-6px);
 }
+
 .miniatura h3 {
     font-size: 16px;
     margin: 10px 0 5px;
 }
+
 .miniatura p {
     font-size: 16px;
     color: #555;
@@ -455,8 +438,9 @@ header p {
     margin-top: 5px;
 }
 
+/* Botones de acción en los productos */
 .btn-agregar {
-    background-color: #000;
+    background-color: #000; /* Corregido: Ahora tiene 3 dígitos */
     color: #f5f5f5;
     border-radius: 4px;
     font-family: Arial, Helvetica, sans-serif;
@@ -478,12 +462,11 @@ header p {
     color: red;
 }
 
-
+/* --- TÍTULOS PRINCIPALES --- */
 .tituloprincipal h2 {
     text-align: center;
     color: white;
     margin-top: 12px;
-  
 }
 
 .tituloprincipal p {
@@ -493,6 +476,7 @@ header p {
     line-height: 3.6;
 }
 
+/* --- SECCIÓN HISTORIA (FONDO NEGRO) --- */
 .historia-negra {
     background: #000;
     color: #fff;
@@ -514,6 +498,7 @@ header p {
     color: #e0e0e0;
 }
 
+/* --- PIE DE PÁGINA (FOOTER) --- */
 footer {
     background: #111;
     color: #fff;
@@ -528,36 +513,25 @@ footer span {
     color: #ccc;
 }
 
+/* Ajustes de prioridad para el footer sobre el fondo animado */
 footer.main-footer {
     position: relative !important;
-    z-index: 9999 !important; /* Más alto que las píldoras y el fondo */
+    z-index: 9999 !important; 
     background: #111;
-    pointer-events: auto !important; /* Obliga a que los clics funcionen aquí */
+    pointer-events: auto !important; 
 }
 
 footer.main-footer a.btn {
     cursor: pointer !important;
     position: relative;
-    z-index: 10000; /* Un poco más que el footer mismo */
+    z-index: 10000;
 }
 
-/* UTILIDADES*/
+/* --- UTILIDADES --- */
 .u-text-center { text-align: center; }
 .u-hidden { display: none; }
-footer {
-    background: #111;
-    color: #fff;
-    text-align: center;
-    padding: 30px 20px;
-    font-size: 14px;
-}
 
-footer span {
-    display: block;
-    margin: 6px 0;
-    color: #ccc;
-}
-
+/* --- RESPONSIVE ADICIONAL PARA EL GRID --- */
 @media (max-width: 1100px) {
     .fila-miniaturas {
         grid-template-columns: repeat(3, 250px);
@@ -576,38 +550,37 @@ footer span {
     }
 }
 
-/* --- CONTENEDORES LATERALES (TIPO PANEL) --- */
+/* --- CONTENEDORES LATERALES (TIPO PANEL DESLIZABLE) --- 
+   Paneles que aparecen al pasar el mouse por los bordes de la pantalla. */
 .contenedor, .contenedor2 {
     position: fixed;
     top: 50%;
-    width: 300px; /* Ancho fijo del panel */
+    width: 300px; 
     z-index: 9999;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: default;
 }
 
-/* Panel Izquierdo: Escondido a la izquierda */
 .contenedor {
-    left: -300px; /* Se esconde exactamente su ancho */
+    left: -300px; 
 }
 
-/* Panel Derecho: Escondido a la derecha */
 .contenedor2 {
-    right: -300px; /* Se esconde exactamente su ancho */
+    right: -300px; 
 }
 
-/* --- ACTIVACIÓN AL PASAR EL MOUSE (ABRIR) --- */
+/* Abrir paneles al hover */
 .contenedor:hover {
-    left: 0; /* Entra totalmente */
+    left: 0; 
 }
 
 .contenedor2:hover {
-    right: 0; /* Entra totalmente */
+    right: 0; 
 }
 
-/* --- ESTILO DEL ASIDE DENTRO DEL PANEL --- */
+/* Estilo del contenido dentro del panel lateral */
 aside {
-    background-color: #1a1a1a; /* Fondo oscuro sólido */
+    background-color: #1a1a1a; 
     color: white;
     padding: 25px;
     height: auto;
@@ -615,16 +588,16 @@ aside {
     box-shadow: 0 0 20px rgba(0,0,0,0.7);
 }
 
-.contenedor aside { border-radius: 0 15px 15px 0; } /* Redondeado derecha */
-.contenedor2 aside { border-radius: 15px 0 0 15px; } /* Redondeado izquierda */
+.contenedor aside { border-radius: 0 15px 15px 0; } 
+.contenedor2 aside { border-radius: 15px 0 0 15px; } 
 
-/* --- LAS PESTAÑAS (LO QUE SE VE CUANDO ESTÁ CERRADO) --- */
+/* Pestañas visibles de los paneles ocultos (❓ y 📍) */
 .contenedor::after, .contenedor2::after {
     position: absolute;
     top: 0;
     width: 45px;
     height: 50px;
-    background: #00d4ff; /* Color vibrante */
+    background: #00d4ff; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -633,31 +606,30 @@ aside {
     box-shadow: 2px 0 10px rgba(0,0,0,0.5);
 }
 
-/* Pestaña Izquierda */
 .contenedor::after {
     content: "❓";
-    right: -45px; /* Se queda pegada al borde derecho del panel oculto */
+    right: -45px; 
     border-radius: 0 10px 10px 0;
 }
 
-/* Pestaña Derecha */
 .contenedor2::after {
     content: "📍";
-    left: -45px; /* Se queda pegada al borde izquierdo del panel oculto */
+    left: -45px; 
     border-radius: 10px 0 0 10px;
 }
 
-/* Asegúrate de que el iframe no herede restricciones */
+/* Asegura que el mapa sea interactuable */
 iframe {
     pointer-events: auto !important;
 }
 
-/* --- MODAL STYLE --- */
+/* --- ESTILOS DE LOS MODALES (POPUPS) --- 
+   Apariencia de la ventana de carrito y selección de tallas. */
 .modal-estilo {
-    display: none; /* Se activa con .modal-active */
+    display: none; 
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(0, 0, 0, 0.9); /* Fondo ultra oscuro */
+    background: rgba(0, 0, 0, 0.9); 
     z-index: 10000;
     align-items: center;
     justify-content: center;
@@ -669,7 +641,7 @@ iframe {
 }
 
 .modal-contenido {
-    background: #111827; /* Azul muy oscuro para combinar con tu .fondo */
+    background: #111827; 
     color: white;
     padding: 25px;
     border-radius: 20px;
@@ -696,6 +668,7 @@ iframe {
     border: 1px solid #333;
 }
 
+/* Botón de WhatsApp */
 .btn-wssp {
     background: #25d366;
     color: #000 !important;
@@ -723,10 +696,9 @@ iframe {
     text-decoration: underline;
 }
 
-
 .cart-count { transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
-/* Y en JS podrías hacer que el contador escale un poco */
 
+/* Estilo de imagen de producto en el modal de tallas */
 .img-grande {
     width: 100%;
     max-height: 200px;
@@ -734,6 +706,7 @@ iframe {
     margin-bottom: 15px;
 }
 
+/* Selector de tallas */
 .tallas-flex {
     display: flex;
     justify-content: center;
@@ -764,12 +737,12 @@ iframe {
     color: #ccc;
 }
 
-/* Centrar el botón de confirmación en el modal */
+/* Botón de confirmar dentro del modal */
 #confirmarAgregar {
-    display: block;      /* Lo convertimos en bloque para usar margin auto */
-    margin: 20px auto;   /* 20px arriba/abajo y centrado a los lados */
-    width: 80%;          /* Le damos un ancho definido para que no ocupe todo */
-    max-width: 250px;    /* Pero que no se vea gigante en pantallas grandes */
+    display: block;      
+    margin: 20px auto;   
+    width: 80%;          
+    max-width: 250px;    
     border: none;
     cursor: pointer;
 }
@@ -781,7 +754,7 @@ iframe {
     color: #ffffff;
     border: 1px solid rgba(255, 255, 255, 0.4);
     padding: 12px 25px;
-    border-radius: 50px; /* Bordes redondeados modernos */
+    border-radius: 50px; 
     text-decoration: none;
     font-weight: bold;
     font-size: 14px;

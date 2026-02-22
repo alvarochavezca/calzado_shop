@@ -1,109 +1,94 @@
+/* --- CONFIGURACIÓN GLOBAL --- */
 * {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-
-/* TABLET */
-
-
+/* --- RESPONSIVE: TABLET --- */
 @media (max-width: 1024px) {
+    /* Ajustes de Navbar */
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
 
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 
+    /* Ajustes de Marca */
+    .brand-content {
+        flex-direction: column;
+        text-align: center;
+    }
 
+    .brand-title {
+        font-size: 2rem;
+    }
 
-/* Navbar */
-.navbar {
-flex-direction: column;
-gap: 15px;
+    /* Ajustes de Productos */
+    .miniatura {
+        width: 45%;
+    }
+
+    /* Ajustes de Texto Hero */
+    .contenido h1 {
+        font-size: 2.2rem;
+    }
 }
 
-.nav-links {
-flex-wrap: wrap;
-justify-content: center;
-}
-
-/* Marca superior */
-.brand-content {
-flex-direction: column;
-text-align: center;
-}
-
-.brand-title {
-font-size: 2rem;
-}
-
-/* Miniaturas */
-.miniatura {
-width: 45%;
-}
-
-/* Fondo texto principal */
-.contenido h1 {
-font-size: 2.2rem;
-}
-
-}
-
-
-
-/* CELULAR */
-
-
+/* --- RESPONSIVE: CELULAR --- */
 @media (max-width: 600px) {
+    /* Navbar compacta */
+    .navbar {
+        flex-direction: column;
+        padding: 1rem 3%;
+    }
 
-/* Navbar */
-.navbar {
-flex-direction: column;
-padding: 1rem 3%;
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .search-cart-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Marca pequeña */
+    .brand-title {
+        font-size: 1.6rem;
+    }
+
+    .brand-slogan {
+        font-size: 0.9rem;
+    }
+
+    /* Productos a pantalla completa */
+    .miniatura {
+        width: 100%;
+    }
+
+    /* Hero móvil */
+    .contenido h1 {
+        font-size: 1.6rem;
+    }
+
+    .contenido p {
+        font-size: 0.9rem;
+    }
+
+    /* Espaciado de historia */
+    .historia-negra {
+        padding: 40px 15px;
+    }
 }
 
-.nav-links {
-flex-direction: column;
-align-items: center;
-gap: 10px;
-}
-
-.search-cart-container {
-flex-direction: column;
-gap: 10px;
-}
-
-/* Marca */
-.brand-title {
-font-size: 1.6rem;
-}
-
-.brand-slogan {
-font-size: 0.9rem;
-}
-
-/* Miniaturas*/
-.miniatura {
-width: 100%;
-}
-
-/* Hero */
-.contenido h1 {
-font-size: 1.6rem;
-}
-
-.contenido p {
-font-size: 0.9rem;
-}
-
-/* Historia */
-.historia-negra {
-padding: 40px 15px;
-}
-
-}
-
-
-
-/* Contenedor Superior */
+/* --- CONTENEDOR SUPERIOR (LOGO Y SLOGAN) --- */
 .brand-container {
     background-color: #f5f5f5; 
     padding: 20px 0;
@@ -144,18 +129,13 @@ padding: 40px 15px;
     margin-top: 5px;
 }
 
-
-
-
-
-
-/*NAVEGACION*/
-
+/* --- NAVEGACIÓN (LINKS Y NAVBAR) --- */
 .nav-links a {
     position: relative;
     text-decoration: none;
 }
 
+/* Efecto de línea inferior al pasar el mouse */
 .nav-links a::after {
     content: "";
     position: absolute;
@@ -171,7 +151,6 @@ padding: 40px 15px;
     width: 100%;
 }
 
-
 .navbar {
     background-color: #000000; 
     color: #ffffff; 
@@ -186,7 +165,6 @@ padding: 40px 15px;
     list-style: none;
     display: flex;
     gap: 20px;
-
 }
 
 .nav-links a {
@@ -194,16 +172,13 @@ padding: 40px 15px;
     text-decoration: none;
     transition: color 0.3s;
     font-weight: bold;
-
 }
 
 .nav-links a:hover {
     color: #00d4ff; 
 }
 
-
-
-/*BUSQUEDA (SEARCH)*/
+/* --- BUSCADOR Y CARRITO --- */
 .search-cart-container {
     display: flex;
     align-items: center;
@@ -241,14 +216,11 @@ padding: 40px 15px;
     right: -10px;
 }
 
-
-
-/*Logo y texto*/
+/* --- LOGO Y SLOGAN --- */
 .logo {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-
 }
 
 .logo img {
@@ -257,13 +229,10 @@ padding: 40px 15px;
     display: flex;
 }
 
-
-
 .logo h1 {
     margin: 0;
     font-size: 32px;
     letter-spacing: 2px;
-
 }
 
 .slogan {
@@ -271,9 +240,7 @@ padding: 40px 15px;
     color: #666;
 }
 
-
-
-
+/* --- FONDO ANIMADO Y PATRONES --- */
 .patron {
     position: absolute;
     inset: 0;
@@ -331,8 +298,7 @@ padding: 40px 15px;
     z-index: 1;
 }
 
-
-
+/* --- PÍLDORAS ANIMADAS (ANIMACIÓN) --- */
 .pildoras {
     position: absolute;
     width: 100%;
@@ -362,63 +328,23 @@ padding: 40px 15px;
 }
 
 @keyframes subir {
-0% {
-  transform: translateY(0) rotate(0deg);
-  opacity: 0;
-}
-50% {
-  opacity: 0.8;
-}
-100% {
-  transform: translateY(-110vh) rotate(360deg);
-  opacity: 0;
-}
+    0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+    50% { opacity: 0.8; }
+    100% { transform: translateY(-110vh) rotate(360deg); opacity: 0; }
 }
 
-.pildoras span:nth-child(1) {
-    left: 10%;
-    animation-duration: 12s;
-}
+/* Posiciones de las píldoras */
+.pildoras span:nth-child(1) { left: 10%; animation-duration: 12s; }
+.pildoras span:nth-child(2) { left: 30%; width: 20px; height: 40px; animation-duration: 8s; }
+.pildoras span:nth-child(3) { left: 50%; animation-duration: 15s; }
+.pildoras span:nth-child(4) { left: 70%; width: 25px; height: 50px; animation-duration: 10s; }
+.pildoras span:nth-child(5) { left: 90%; animation-duration: 18s; }
 
-.pildoras span:nth-child(2) {
-    left: 30%;
-    width: 20px;
-    height: 40px;
-    animation-duration: 8s;
-}
+header img { width: 80px; }
+header h1 { font-size: 1.8rem; }
+header p { font-size: 0.9rem; color: #666; }
 
-.pildoras span:nth-child(3) {
-    left: 50%;
-    animation-duration: 15s;
-}
-
-.pildoras span:nth-child(4) {
-    left: 70%;
-    width: 25px;
-    height: 50px;
-    animation-duration: 10s;
-}
-
-.pildoras span:nth-child(5) {
-    left: 90%;
-    animation-duration: 18s;
-}
-
-
-header img {
-    width: 80px;
-}
-
-header h1 {
-    font-size: 1.8rem;
-}
-
-header p {
-    font-size: 0.9rem;
-    color: #666;
-}
-
-
+/* --- GRILLA DE PRODUCTOS --- */
 .fila-miniaturas {
     display: grid;
     grid-template-columns: repeat(4, 250px);
@@ -426,7 +352,6 @@ header p {
     gap: 30px;
     margin: 0 auto 60px;
 }
-
 
 .miniatura {
     width: 220px;
@@ -442,28 +367,17 @@ header p {
 .miniatura img {
     width: 100%;
     border-radius: 12px;
-
 }
 
 .miniatura :hover {
     transform: translateY(-6px);
 }
-.miniatura h3 {
-    font-size: 16px;
-    margin: 10px 0 5px;
-}
-.miniatura p {
-    font-size: 16px;
-    color: #555;
-}
 
-.miniatura span {
-    font-weight: bold;
-    font-size: 16px;
-    display: block;
-    margin-top: 5px;
-}
+.miniatura h3 { font-size: 16px; margin: 10px 0 5px; }
+.miniatura p { font-size: 16px; color: #555; }
+.miniatura span { font-weight: bold; font-size: 16px; display: block; margin-top: 5px; }
 
+/* --- BOTONES --- */
 .btn-agregar {
     background-color: #000;
     color: #f5f5f5;
@@ -487,12 +401,34 @@ header p {
     color: red;
 }
 
+/* Repetición de estilos para seguridad */
+.btn-agregar {
+    background-color: #000;
+    color: #f5f5f5;
+    border-radius: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 3px;
+    position: relative;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.btn-eliminar {
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 15px;
+    transition: 0.2s;
+}
+
+.btn-eliminar:hover {
+    transform: scale(1.2);
+    color: red;
+}
 
 .tituloprincipal h2 {
     text-align: center;
     color: white;
     margin-top: 12px;
-  
 }
 
 .tituloprincipal p {
@@ -502,6 +438,7 @@ header p {
     line-height: 3.6;
 }
 
+/* --- HISTORIA --- */
 .historia-negra {
     background: #000;
     color: #fff;
@@ -523,7 +460,7 @@ header p {
     color: #e0e0e0;
 }
 
-
+/* --- FOOTER --- */
 footer {
     background: #111;
     color: #fff;
@@ -563,22 +500,22 @@ footer span {
 
 footer.main-footer {
     position: relative !important;
-    z-index: 9999 !important; /* Más alto que las píldoras y el fondo */
+    z-index: 9999 !important;
     background: #111;
-    pointer-events: auto !important; /* Obliga a que los clics funcionen aquí */
+    pointer-events: auto !important;
 }
 
 footer.main-footer a.btn {
     cursor: pointer !important;
     position: relative;
-    z-index: 10000; /* Un poco más que el footer mismo */
+    z-index: 10000;
 }
 
-/* UTILIDADES*/
+/* --- UTILIDADES --- */
 .u-text-center { text-align: center; }
 .u-hidden { display: none; }
 
-/* CAJAS INFERIORES */
+/* --- CAJAS DE INFORMACIÓN --- */
 .info-cajas {
     display: flex;
     justify-content: space-between;
@@ -596,65 +533,40 @@ footer.main-footer a.btn {
     background: #fff;
 }
 
-.caja h4 {
-    margin-bottom: 10px;
-    font-size: 18px;
-}
+.caja h4 { margin-bottom: 10px; font-size: 18px; }
+.caja p { font-size: 14px; margin: 4px 0; }
 
-.caja p {
-    font-size: 14px;
-    margin: 4px 0;
-}
+/* --- RESPONSIVE DE GRILLA --- */
 @media (max-width: 1100px) {
-    .fila-miniaturas {
-        grid-template-columns: repeat(3, 250px);
-    }
+    .fila-miniaturas { grid-template-columns: repeat(3, 250px); }
 }
 
 @media (max-width: 850px) {
-    .fila-miniaturas {
-        grid-template-columns: repeat(2, 250px);
-    }
+    .fila-miniaturas { grid-template-columns: repeat(2, 250px); }
 }
 
 @media (max-width: 550px) {
-    .fila-miniaturas {
-        grid-template-columns: repeat(1, 250px);
-    }
+    .fila-miniaturas { grid-template-columns: repeat(1, 250px); }
 }
 
-/* --- CONTENEDORES LATERALES (TIPO PANEL) --- */
+/* --- PANELES LATERALES --- */
 .contenedor, .contenedor2 {
     position: fixed;
     top: 50%;
-    width: 300px; /* Ancho fijo del panel */
+    width: 300px;
     z-index: 9999;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     cursor: default;
 }
 
-/* Panel Izquierdo: Escondido a la izquierda */
-.contenedor {
-    left: -300px; /* Se esconde exactamente su ancho */
-}
+.contenedor { left: -300px; }
+.contenedor2 { right: -300px; }
 
-/* Panel Derecho: Escondido a la derecha */
-.contenedor2 {
-    right: -300px; /* Se esconde exactamente su ancho */
-}
+.contenedor:hover { left: 0; }
+.contenedor2:hover { right: 0; }
 
-/* --- ACTIVACIÓN AL PASAR EL MOUSE (ABRIR) --- */
-.contenedor:hover {
-    left: 0; /* Entra totalmente */
-}
-
-.contenedor2:hover {
-    right: 0; /* Entra totalmente */
-}
-
-/* --- ESTILO DEL ASIDE DENTRO DEL PANEL --- */
 aside {
-    background-color: #1a1a1a; /* Fondo oscuro sólido */
+    background-color: #1a1a1a;
     color: white;
     padding: 25px;
     height: auto;
@@ -662,16 +574,15 @@ aside {
     box-shadow: 0 0 20px rgba(0,0,0,0.7);
 }
 
-.contenedor aside { border-radius: 0 15px 15px 0; } /* Redondeado derecha */
-.contenedor2 aside { border-radius: 15px 0 0 15px; } /* Redondeado izquierda */
+.contenedor aside { border-radius: 0 15px 15px 0; }
+.contenedor2 aside { border-radius: 15px 0 0 15px; }
 
-/* --- LAS PESTAÑAS (LO QUE SE VE CUANDO ESTÁ CERRADO) --- */
 .contenedor::after, .contenedor2::after {
     position: absolute;
     top: 0;
     width: 45px;
     height: 50px;
-    background: #00d4ff; /* Color vibrante */
+    background: #00d4ff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -680,44 +591,27 @@ aside {
     box-shadow: 2px 0 10px rgba(0,0,0,0.5);
 }
 
-/* Pestaña Izquierda */
-.contenedor::after {
-    content: "❓";
-    right: -45px; /* Se queda pegada al borde derecho del panel oculto */
-    border-radius: 0 10px 10px 0;
-}
+.contenedor::after { content: "❓"; right: -45px; border-radius: 0 10px 10px 0; }
+.contenedor2::after { content: "📍"; left: -45px; border-radius: 10px 0 0 10px; }
 
-/* Pestaña Derecha */
-.contenedor2::after {
-    content: "📍";
-    left: -45px; /* Se queda pegada al borde izquierdo del panel oculto */
-    border-radius: 10px 0 0 10px;
-}
+iframe { pointer-events: auto !important; }
 
-/* Asegúrate de que el iframe no herede restricciones */
-iframe {
-    pointer-events: auto !important;
-}
-
-
-/* --- MODAL STYLE --- */
+/* --- ESTILOS MODAL --- */
 .modal-estilo {
-    display: none; /* Se activa con .modal-active */
+    display: none;
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(0, 0, 0, 0.9); /* Fondo ultra oscuro */
+    background: rgba(0, 0, 0, 0.9);
     z-index: 10000;
     align-items: center;
     justify-content: center;
     padding: 20px;
 }
 
-.modal-estilo.modal-active {
-    display: flex;
-}
+.modal-estilo.modal-active { display: flex; }
 
 .modal-contenido {
-    background: #111827; /* Azul muy oscuro para combinar con tu .fondo */
+    background: #111827;
     color: white;
     padding: 25px;
     border-radius: 20px;
@@ -756,10 +650,7 @@ iframe {
     transition: 0.3s;
 }
 
-.btn-wssp:hover {
-    background: #1ebe57;
-    transform: scale(1.02);
-}
+.btn-wssp:hover { background: #1ebe57; transform: scale(1.02); }
 
 .btn-cerrar {
     background: transparent;
@@ -771,9 +662,7 @@ iframe {
     text-decoration: underline;
 }
 
-
 .cart-count { transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
-/* Y en JS podrías hacer que el contador escale un poco */
 
 .img-grande {
     width: 100%;
@@ -782,6 +671,7 @@ iframe {
     margin-bottom: 15px;
 }
 
+/* --- TALLAS --- */
 .tallas-flex {
     display: flex;
     justify-content: center;
@@ -807,29 +697,25 @@ iframe {
     font-weight: bold;
 }
 
-.selector-talla p {
-    font-size: 14px;
-    color: #ccc;
-}
+.selector-talla p { font-size: 14px; color: #ccc; }
 
-/* Centrar el botón de confirmación en el modal */
 #confirmarAgregar {
-    display: block;      /* Lo convertimos en bloque para usar margin auto */
-    margin: 20px auto;   /* 20px arriba/abajo y centrado a los lados */
-    width: 80%;          /* Le damos un ancho definido para que no ocupe todo */
-    max-width: 250px;    /* Pero que no se vea gigante en pantallas grandes */
+    display: block;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 250px;
     border: none;
     cursor: pointer;
 }
 
-/* --- BOTÓN LIBRO DE RECLAMACIONES --- */
+/* --- BOTÓN RECLAMACIONES --- */
 .main-footer .btn-outline-light {
     display: inline-block;
     background-color: transparent;
     color: #ffffff;
     border: 1px solid rgba(255, 255, 255, 0.4);
     padding: 12px 25px;
-    border-radius: 50px; /* Bordes redondeados modernos */
+    border-radius: 50px;
     text-decoration: none;
     font-weight: bold;
     font-size: 14px;

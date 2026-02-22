@@ -1,20 +1,19 @@
+/* ==========================================================
+   RESETEO Y ESTILOS GLOBALES
+   ========================================================== */
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
   font-family: Arial, sans-serif;
 }
 
-
-/* TABLET */
-
-
+/* ==========================================================
+   DISEÑO RESPONSIVO: TABLETA (Máximo 1024px)
+   ========================================================== */
 @media (max-width: 1024px) {
 
-
- 
-
-  /* Navbar */
+  /* Ajuste de Navbar para tabletas */
   .navbar {
     flex-direction: column;
     gap: 15px;
@@ -25,7 +24,7 @@
     justify-content: center;
   }
 
-  /* Marca superior */
+  /* Ajuste de sección de marca superior */
   .brand-content {
     flex-direction: column;
     text-align: center;
@@ -35,26 +34,23 @@
     font-size: 2rem;
   }
 
-  /* Miniaturas */
+  /* Miniaturas de productos: 2 por fila aproximadamente */
   .miniatura {
     width: 45%;
   }
 
-  /* Fondo texto principal */
+  /* Ajuste de tamaño de texto en el Hero */
   .contenido h1 {
     font-size: 2.2rem;
   }
-
 }
 
-
-
-/* CELULAR */
-
-
+/* ==========================================================
+   DISEÑO RESPONSIVO: CELULAR (Máximo 600px)
+   ========================================================== */
 @media (max-width: 600px) {
 
-  /* Navbar */
+  /* Navbar vertical para pantallas pequeñas */
   .navbar {
     flex-direction: column;
     padding: 1rem 3%;
@@ -71,7 +67,7 @@
     gap: 10px;
   }
 
-  /* Marca */
+  /* Reducción de textos de marca */
   .brand-title {
     font-size: 1.6rem;
   }
@@ -80,12 +76,12 @@
     font-size: 0.9rem;
   }
 
-  /* Miniaturas (1 por fila) */
+  /* Miniaturas ocupan todo el ancho (1 por fila) */
   .miniatura {
     width: 100%;
   }
 
-  /* Hero */
+  /* Ajuste de textos en sección Hero */
   .contenido h1 {
     font-size: 1.6rem;
   }
@@ -94,15 +90,15 @@
     font-size: 0.9rem;
   }
 
-  /* Historia */
+  /* Reducción de relleno en sección historia */
   .historia-negra {
     padding: 40px 15px;
   }
-
 }
 
-
-
+/* ==========================================================
+   CABECERA DE MARCA (Brand Container)
+   ========================================================== */
 /* Contenedor Superior (Blanco Opaco) */
 .brand-container {
   background-color: #f5f5f5; /* Blanco opaco / Gris muy claro */
@@ -144,13 +140,10 @@
   margin-top: 5px;
 }
 
-
-
-
-
-
-/*NAVEGACION*/
-
+/* ==========================================================
+   NAVEGACIÓN (Navbar)
+   ========================================================== */
+/* Efecto de subrayado animado en los enlaces */
 .nav-links a {
   position: relative;
   text-decoration: none;
@@ -171,7 +164,7 @@
   width: 100%;
 }
 
-
+/* Contenedor principal de la barra de navegación */
 .navbar {
   background-color: #000000; /* Negro puro */
   color: #ffffff; /* Letras blancas */
@@ -186,7 +179,6 @@
   list-style: none;
   display: flex;
   gap: 20px;
-  
 }
 
 .nav-links a {
@@ -194,16 +186,15 @@
   text-decoration: none;
   transition: color 0.3s;
   font-weight: bold;
-  
 }
 
 .nav-links a:hover {
   color: #00d4ff; /* Un toque de color al pasar el mouse */
 }
 
-
-
-/*BUSQUEDA (SEARCH)*/
+/* ==========================================================
+   BÚSQUEDA Y CARRITO (Search & Cart)
+   ========================================================== */
 .search-cart-container {
   display: flex;
   align-items: center;
@@ -231,6 +222,7 @@
   position: relative;
 }
 
+/* Burbuja roja de cantidad en el carrito */
 .cart-count {
   background: #ff4757; /* Color llamativo para el contador */
   font-size: 10px;
@@ -241,13 +233,13 @@
   right: -10px;
 }
 
-
-/*Logo y texto*/
+/* ==========================================================
+   LOGO SECUNDARIO / OTROS LOGOS
+   ========================================================== */
 .logo {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-   
 }
 
 .logo img {
@@ -256,13 +248,10 @@
   display: flex;
 }
 
-
-
 .logo h1 {
   margin: 0;
   font-size: 32px;
   letter-spacing: 2px;
-  
 }
 
 .slogan {
@@ -270,7 +259,10 @@
   color: #666;
 }
 
-
+/* ==========================================================
+   SECCIÓN HERO / FONDO ANIMADO
+   ========================================================== */
+/* Gradientes decorativos en las esquinas */
 .detalles {
   position: absolute;
   inset: 0;
@@ -281,6 +273,7 @@
       linear-gradient(-120deg, transparent 85%, #6b4bff22 90%);
 }
 
+/* Patrón de puntos de fondo */
 .patron {
   position: absolute;
   inset: 0;
@@ -290,7 +283,7 @@
   background-size: 22px 22px;
 }
 
-
+/* Contenido central del Hero */
 .contenido {
   position: relative;
   z-index: 1;
@@ -312,13 +305,15 @@
   opacity: 0.85;
 }
 
+/* Estilo del contenedor de fondo principal */
 .fondo {
   margin: 0;
   min-height: 100vh;
-  background: #0f172a; /* fondo oscuro *//* para que no salga scroll */
+  background: #0f172a; /* fondo oscuro */
   position: relative;
 }
 
+/* Redefinición de detalles y patrón (por si se usan fuera de fondo) */
 .detalles {
   position: absolute;
   inset: 0;
@@ -331,8 +326,9 @@
   z-index: 1;
 }
 
-
-
+/* ==========================================================
+   ANIMACIÓN DE PÍLDORAS (Efecto Burbujas/Flotante)
+   ========================================================== */
 .pildoras {
   position: absolute;
   width: 100%;
@@ -361,6 +357,7 @@
   z-index: 4;
 }
 
+/* Animación que mueve los elementos hacia arriba y los rota */
 @keyframes subir {
     0% {
         transform: translateY(0) rotate(0deg);
@@ -375,6 +372,7 @@
     }
 }
 
+/* Diferentes posiciones y tiempos para las píldoras animadas */
 .pildoras span:nth-child(1) {
   left: 10%;
   animation-duration: 12s;
@@ -404,7 +402,9 @@
   animation-duration: 18s;
 }
 
-
+/* ==========================================================
+   HEADER Y PRODUCTOS (Miniaturas)
+   ========================================================== */
 header img {
   width: 80px;
 }
@@ -418,7 +418,7 @@ header p {
   color: #666;
 }
 
-   
+/* Grid de productos: 4 columnas de 250px cada una */
 .fila-miniaturas {
     display: grid;
     grid-template-columns: repeat(4, 250px);
@@ -427,6 +427,7 @@ header p {
     margin: 0 auto 60px;
 }
 
+/* Tarjeta de producto individual */
 .miniatura {
     width: 250px;
     background-color: #f3f3f3;
@@ -439,6 +440,7 @@ header p {
     position: relative;
 }
 
+/* Texto tachado para precios antiguos */
 del {
   color: #e53935;
 }
@@ -446,16 +448,17 @@ del {
 .miniatura img {
     width: 100%;
     border-radius: 12px;
-
 }
 
 .miniatura :hover {
     transform: translateY(-6px);
 }
+
 .miniatura h3 {
     font-size: 16px;
     margin: 10px 0 5px;
 }
+
 .miniatura p {
     font-size: 16px;
     color: #555;
@@ -468,6 +471,7 @@ del {
     margin-top: 5px;
 }
 
+/* Botones dentro de las tarjetas */
 .btn-agregar {
     background-color: #000;
     color: #f5f5f5;
@@ -491,6 +495,9 @@ del {
     color: red;
 }
 
+/* ==========================================================
+   SECCIÓN DE MARCAS Y TEXTOS INFORMATIVOS
+   ========================================================== */
 .marcas {
     text-align: center;
     width: 90%;
@@ -506,14 +513,10 @@ del {
     border: 1px solid rgba(255,255,255,0.05);
 }
 
-
-
-
 .tituloprincipal h2 {
   text-align: center;
   color: white;
   margin-top: 12px;
-    
 }
 
 .tituloprincipal p {
@@ -523,6 +526,7 @@ del {
   line-height: 3.6;
 }
 
+/* Sección de historia con fondo negro */
 .historia-negra {
     background: #000;
     color: #fff;
@@ -544,7 +548,9 @@ del {
     color: #e0e0e0;
 }
 
-
+/* ==========================================================
+   FOOTER (Pie de página)
+   ========================================================== */
 footer {
   background: #111;
   color: #fff;
@@ -559,6 +565,9 @@ footer span {
   color: #ccc;
 }
 
+/* ==========================================================
+   PANELES LATERALES DESPLEGABLES (Aside)
+   ========================================================== */
 .contenedor, .contenedor2 {
     position: fixed;
     top: 50%;
@@ -615,20 +624,23 @@ aside {
     box-shadow: 2px 0 10px rgba(0,0,0,0.5);
 }
 
-/* Pestaña Izquierda */
+/* Pestaña Izquierda (Símbolo de pregunta) */
 .contenedor::after {
     content: "❓";
     right: -45px; /* Se queda pegada al borde derecho del panel oculto */
     border-radius: 0 10px 10px 0;
 }
 
-/* Pestaña Derecha */
+/* Pestaña Derecha (Símbolo de ubicación) */
 .contenedor2::after {
     content: "📍";
     left: -45px; /* Se queda pegada al borde izquierdo del panel oculto */
     border-radius: 10px 0 0 10px;
 }
 
+/* ==========================================================
+   MAPAS Y ELEMENTOS EXTERNOS
+   ========================================================== */
 .mapa-contenedor {
     position: relative;
     z-index: 10000;
@@ -637,12 +649,15 @@ aside {
     overflow: hidden; /* Corta las esquinas del iframe para que respete el radius */
 }
 
-/* Asegúrate de que el iframe no herede restricciones */
+/* Asegura que se pueda interactuar con el mapa de Google */
 iframe {
     pointer-events: auto !important;
 }
 
-/* --- MODAL STYLE --- */
+/* ==========================================================
+   MODAL DE CARRITO Y SELECCIÓN
+   ========================================================== */
+/* --- ESTILO DEL MODAL --- */
 .modal-estilo {
     display: none; /* Se activa con .modal-active */
     position: fixed;
@@ -670,6 +685,7 @@ iframe {
     box-shadow: 0 20px 50px rgba(0,0,0,0.5);
 }
 
+/* Elementos individuales dentro del carrito */
 .item-carrito {
     display: flex;
     align-items: center;
@@ -686,6 +702,7 @@ iframe {
     border: 1px solid #333;
 }
 
+/* Botón de Checkout por WhatsApp */
 .btn-wssp {
     background: #25d366;
     color: #000 !important;
@@ -713,6 +730,7 @@ iframe {
     text-decoration: underline;
 }
 
+/* Etiqueta de "Próximamente" o similar */
 .proxi {
     position: absolute;
     top: 8px;
@@ -726,10 +744,10 @@ iframe {
     line-height: 1;
 }
 
-
+/* Transición suave para el contador del carrito */
 .cart-count { transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
-/* Y en JS podrías hacer que el contador escale un poco */
 
+/* Imagen destacada dentro del modal de producto */
 .img-grande {
     width: 100%;
     max-height: 200px;
@@ -737,6 +755,7 @@ iframe {
     margin-bottom: 15px;
 }
 
+/* Selector de tallas */
 .tallas-flex {
     display: flex;
     justify-content: center;
@@ -755,6 +774,7 @@ iframe {
     transition: 0.3s;
 }
 
+/* Talla seleccionada */
 .btn-talla.active {
     background: #00d4ff;
     border-color: #00d4ff;
@@ -767,7 +787,7 @@ iframe {
     color: #ccc;
 }
 
-/* Centrar el botón de confirmación en el modal */
+/* Botón de confirmación centrado */
 #confirmarAgregar {
     display: block;      /* Lo convertimos en bloque para usar margin auto */
     margin: 20px auto;   /* 20px arriba/abajo y centrado a los lados */
@@ -777,6 +797,7 @@ iframe {
     cursor: pointer;
 }
 
+/* Botones con estilo Outline para el Footer */
 .main-footer .btn-outline-light {
     display: inline-block;
     background-color: transparent;

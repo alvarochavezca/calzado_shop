@@ -20,7 +20,7 @@
   <header class="main-header">
     <div class="brand-container">
       <div class="brand-content">
-        <a href="/pagina principal/index.html">
+        <a href="../pagina principal/index.html">
           <img src="../imagenes mujer/logo.png" alt="Logo" class="logo-img">
         </a>
         <div class="brand-text">
@@ -54,18 +54,17 @@
             <li><a href="proximamente.html" target="_blank">PRÓXIMOS LANZAMIENTOS</a></li>
           </article>
           <article>
-            <li><a href="tendencias.html" target="">TENDENCIAS</a></li>
+            <li><a href="tendencias.html" target="_blank">TENDENCIAS</a></li>
           </article>
         </ul>
 
         <div class="search-cart-container">
           <div class="search-box">
-            <input type="text" placeholder="Buscar...">
-            <button>🔍</button>
+            <input type="text" id="buscador" placeholder="Buscar...">
+            <button id="btnBuscar">🔍</button>
           </div>
           
-          <div class="cart-icon">
-            🛒
+          <div class="cart-icon">🛒
             <span class="cart-count">0</span>
           </div>
         </div>
@@ -118,16 +117,6 @@
           <button class="btn-agregar"><span>Agregar al carrito 🛒</span></button>
         </div>
       
-        <div class="contenedor">
-          <aside> 
-            <h2>¿Por qué elegirnos?</h2>
-            <ul>
-              <li>✔ Garantía de calidad</li>
-              <li>✔ Modelos originales</li>
-              <li>✔ Entrega rápida</li>
-            </ul>
-          </aside>
-        </div>
 
         <div class="miniatura">
           <img src="../imagenes mujer/mujer5.png" alt="Imagen no encontrada">
@@ -167,24 +156,32 @@
             </ul>
           </aside>
         </div>
-        <div class="contenedor2">
-          <aside style="z-index: 1000;"> <h2>Contáctanos</h2>
-            <ul>
-              <li>✔ Nro. wssp: <a href="https://wa.me/51918374192" target="_blank" style="color: #25d366;">918374192</a></li>
-              <li>✔ Dirección: Av. Las Flores 123</li>
-            </ul>
-            <div class="mapa-contenedor">
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d975.4358496745492!2d-77.0133849!3d-12.0611682!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8a1b63eb821%3A0x7d378ae889f78714!2sCentro%20Comercial%2028%20de%20Julio%20de%20Manzanilla!5e0!3m2!1ses-419!2spe!4v1771704744619!5m2!1ses-419!2spe" 
-                width="100%" 
-                height="150" 
-                style="border:0; border-radius: 10px; pointer-events: auto;" 
-                allowfullscreen="" 
-                loading="lazy">
-              </iframe>
+        <div class="contenedor">
+            <aside> 
+              <h2 style="color: #00d4ff;">¿Por qué elegirnos?</h2>
+                <ul style="list-style: none; padding: 0;">
+                  <li style="margin-bottom: 10px;">✔ Garantía de calidad</li>
+                  <li style="margin-bottom: 10px;">✔ Modelos originales</li>
+                  <li style="margin-bottom: 10px;">✔ Entrega rápida</li>
+                </ul>
+            </aside>
+          </div>
+
+            <div class="contenedor2">
+              <aside> 
+                <h2 style="color: #00d4ff;">Contáctanos</h2>
+                  <ul style="list-style: none; padding: 0;">
+                    <li><b>WhatsApp:</b> <br> <a href="https://wa.me/51918374192" target="_blank" style="color: #25d366; text-decoration: none;">+51 944 211 021</a></li>
+                    <li style="margin-top: 10px;"><b>Dirección:</b> <br> Centro Comercial Manzanilla - Av. 28 de Julio 2767, Lima 15018</li>
+                  </ul>
+                <div class="mapa-contenedor" style="margin-top: 15px;">
+                  <iframe 
+                      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d975.4358496745492!2d-77.0133849!3d-12.0611682!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8a1b63eb821%3A0x7d378ae889f78714!2sCentro%20Comercial%2028%20de%20Julio%20de%20Manzanilla!5e0!3m2!1ses-419!2spe!4v1771704744619!5m2!1ses-419!2spe" 
+                      width="100%" height="150" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy">
+                  </iframe>
+                </div>
+              </aside>
             </div>
-          </aside>
-        </div>
 
         <div class="miniatura">
           <img src="../imagenes mujer/mujer9.png" alt="Imagen no encontrada">
@@ -268,14 +265,57 @@
       </section>
 
     </main>
-    <div>    
-      <footer>
-        <p>©2026 Información sobre Calzado Shop</p>
-        <p>Todos los derechos reservados</p>
-        <p>libro de reclamaciones</p>
-      </footer>
+      <footer class="main-footer mt-5 py-4 text-center" style="border-top: 1px solid rgba(255,255,255,0.1);">
+            <div class="container-fluid">
+                <p class="mb-1 text-white-50 small">©2026 Información sobre Calzado Shop - Todos los derechos reservados</p>
+            
+                <a href="../paginas/reclamaciones.html" target="_blank" class="btn btn-outline-light btn-sm">
+                    📖 LIBRO DE RECLAMACIONES
+                </a>
+            </div>
+        </footer>
+
+    <div id="miModalCarrito" class="modal-estilo">
+        <div class="modal-contenido">
+            <h3>Tu Pedido</h3>
+            <div id="listaProductos"></div>
+            <div class="modal-footer">
+                <a id="btnWhatsapp" target="_blank" class="btn-wssp">Solicitar por WhatsApp</a>
+                <button onclick="cerrarModal()" class="btn-cerrar">Seguir comprando</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalProducto" class="modal-estilo">
+        <div class="modal-contenido">
+            <img id="modalImg" src="" class="img-grande">
+            <h3 id="modalNombre">Nombre</h3>
+            <p id="modalPrecio">S/0.00</p>
+        
+            <div class="selector-talla">
+                <p>Selecciona tu talla:</p>
+                <div class="tallas-flex">
+                    <button class="btn-talla">35</button>
+                    <button class="btn-talla">36</button>
+                    <button class="btn-talla">37</button>
+                    <button class="btn-talla">38</button>
+                    <button class="btn-talla">39</button>
+                    <button class="btn-talla">40</button>
+                    <button class="btn-talla">41</button>
+                    <button class="btn-talla">42</button>
+                    <button class="btn-talla">43</button>
+                    <button class="btn-talla">44</button>
+                </div>
+            </div>
+
+            <button id="confirmarAgregar" class="btn-wssp" style="background: #00d4ff; color: #fff;">
+                Añadir al carrito 🛒
+            </button>
+            <button onclick="cerrarModalTalla()" class="btn-cerrar">Cancelar</button>
+        </div>
     </div>
   </div>
+
   <script src="../Java/Proyecto-calzado.js"></script>
 
 </body>

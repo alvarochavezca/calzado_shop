@@ -1,106 +1,96 @@
-
-
+/* --- CONFIGURACIÓN GENERAL --- */
 * {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+    font-family: Arial, sans-serif;
 }
 
-/* TABLET */
-
+/* --- RESPONSIVE: TABLET (Hasta 1024px) --- */
 @media (max-width: 1024px) {
+    /* Ajusta la barra de navegación a diseño vertical */
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
 
+    /* Permite que los links se envuelvan si no hay espacio */
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 
+    /* Centra el logo y texto de marca */
+    .brand-content {
+        flex-direction: column;
+        text-align: center;
+    }
 
+    .brand-title {
+        font-size: 2rem;
+    }
 
-/* Navbar */
-.navbar {
-flex-direction: column;
-gap: 15px;
+    /* Las miniaturas ocupan casi la mitad de la pantalla (2 por fila) */
+    .miniatura {
+        width: 45%;
+    }
+
+    /* Ajuste de tamaño de fuente del título Hero */
+    .contenido h1 {
+        font-size: 2.2rem;
+    }
 }
 
-.nav-links {
-flex-wrap: wrap;
-justify-content: center;
-}
-
-/* Marca superior */
-.brand-content {
-flex-direction: column;
-text-align: center;
-}
-
-.brand-title {
-font-size: 2rem;
-}
-
-/* Miniaturas */
-.miniatura {
-width: 45%;
-}
-
-/* Fondo texto principal */
-.contenido h1 {
-font-size: 2.2rem;
-}
-
-}
-
-/* CELULAR */
-
+/* --- RESPONSIVE: CELULAR (Hasta 600px) --- */
 @media (max-width: 600px) {
+    /* Navbar compacta y vertical */
+    .navbar {
+        flex-direction: column;
+        padding: 1rem 3%;
+    }
 
-/* Navbar */
-.navbar {
-flex-direction: column;
-padding: 1rem 3%;
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* El buscador y carrito se apilan */
+    .search-cart-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Reducción de textos de marca para pantallas pequeñas */
+    .brand-title {
+        font-size: 1.6rem;
+    }
+
+    .brand-slogan {
+        font-size: 0.9rem;
+    }
+
+    /* Las miniaturas ocupan todo el ancho (1 por fila) */
+    .miniatura {
+        width: 100%;
+    }
+
+    /* Ajuste del Hero para móviles */
+    .contenido h1 {
+        font-size: 1.6rem;
+    }
+
+    .contenido p {
+        font-size: 0.9rem;
+    }
+
+    /* Menos espacio en la sección historia */
+    .historia-negra {
+        padding: 40px 15px;
+    }
 }
 
-.nav-links {
-flex-direction: column;
-align-items: center;
-gap: 10px;
-}
-
-.search-cart-container {
-flex-direction: column;
-gap: 10px;
-}
-
-/* Marca */
-.brand-title {
-font-size: 1.6rem;
-}
-
-.brand-slogan {
-font-size: 0.9rem;
-}
-
-/* Miniaturas */
-.miniatura {
-width: 100%;
-}
-
-/* Hero */
-.contenido h1 {
-font-size: 1.6rem;
-}
-
-.contenido p {
-font-size: 0.9rem;
-}
-
-/* Historia */
-.historia-negra {
-padding: 40px 15px;
-}
-
-}
-
-
-
-/* Contenedor Superior */
+/* --- SECCIÓN SUPERIOR (BRANDING / LOGO) --- */
 .brand-container {
     background-color: #f5f5f5; 
     padding: 20px 0;
@@ -141,9 +131,8 @@ padding: 40px 15px;
     margin-top: 5px;
 }
 
-
-/*NAVEGACION*/
-
+/* --- NAVEGACIÓN Y EFECTOS --- */
+/* Efecto de línea inferior (hover) en links */
 .nav-links a {
     position: relative;
     text-decoration: none;
@@ -164,7 +153,7 @@ padding: 40px 15px;
     width: 100%;
 }
 
-
+/* Estilos de la barra negra de navegación */
 .navbar {
     background-color: #000000; 
     color: #ffffff; 
@@ -179,7 +168,6 @@ padding: 40px 15px;
     list-style: none;
     display: flex;
     gap: 20px;
-
 }
 
 .nav-links a {
@@ -187,16 +175,13 @@ padding: 40px 15px;
     text-decoration: none;
     transition: color 0.3s;
     font-weight: bold;
-
 }
 
 .nav-links a:hover {
     color: #00d4ff; 
 }
 
-
-
-/*BUSQUEDA (SEARCH)*/
+/* --- BLOQUE DE BÚSQUEDA Y CARRITO --- */
 .search-cart-container {
     display: flex;
     align-items: center;
@@ -224,6 +209,7 @@ padding: 40px 15px;
     position: relative;
 }
 
+/* Burbuja roja de cantidad en carrito */
 .cart-count {
     background: #ff4757; 
     font-size: 10px;
@@ -234,8 +220,7 @@ padding: 40px 15px;
     right: -10px;
 }
 
-
-/*Logo y texto*/
+/* --- LOGO SECUNDARIO (Si aplica) --- */
 .logo {
     display: flex;
     flex-direction: column;
@@ -248,13 +233,10 @@ padding: 40px 15px;
     display: flex;
 }
 
-
-
 .logo h1 {
     margin: 0;
     font-size: 32px;
     letter-spacing: 2px;
-
 }
 
 .slogan {
@@ -262,10 +244,8 @@ padding: 40px 15px;
     color: #666;
 }
 
-
-
-
-/* Busca estas clases y cámbialas así: */
+/* --- CAPAS DE FONDO Y ANIMACIONES (PÍLDORAS) --- */
+/* Jerarquía de capas de fondo */
 .patron {
     z-index: 1; /* Fondo base */
 }
@@ -276,16 +256,17 @@ padding: 40px 15px;
 
 .pildoras {
     z-index: 3; /* Animación de burbujas */
-    pointer-events: none; /* ESTO ES CLAVE: permite que el clic pase a través */
+    pointer-events: none; /* Permite clics a través de la animación */
 }
 
-/* Agrega esto al final de tu CSS para blindar el footer */
+/* Blindaje para que el footer siempre esté arriba y sea clicable */
 footer, .main-footer {
     position: relative !important;
-    z-index: 9999 !important; /* Por encima de todo */
-    pointer-events: auto !important; /* Obliga a que reciba clics */
+    z-index: 9999 !important; 
+    pointer-events: auto !important; 
 }
 
+/* Contenedor de texto sobre el fondo animado */
 .contenido {
     position: relative;
     z-index: 1;
@@ -307,6 +288,7 @@ footer, .main-footer {
     opacity: 0.85;
 }
 
+/* Configuración del lienzo de fondo */
 .fondo {
     margin: 0;
     min-height: 100vh;
@@ -318,13 +300,14 @@ footer, .main-footer {
 .patron, .detalles, .pildoras {
     position: absolute;
     inset: 0;
-    pointer-events: none; /* Fundamental para poder hacer clic en lo que esté atrás */
+    pointer-events: none;
 }
 
 .patron { z-index: 1; }
 .detalles { z-index: 2; }
 .pildoras { z-index: 3; }
 
+/* Estilo individual de las píldoras animadas */
 .pildoras span {
     position: absolute;
     bottom: -100px;
@@ -337,67 +320,35 @@ footer, .main-footer {
 }
 
 .contenido {
-    position: relative;
-    z-index: 4;
+    z-index: 4; /* Texto por encima de las píldoras */
 }
 
+/* Animación de movimiento ascendente */
 @keyframes subir {
-0% {
-transform: translateY(0) rotate(0deg);
-opacity: 0;
-}
-50% {
-opacity: 0.8;
-}
-100% {
-transform: translateY(-110vh) rotate(360deg);
-opacity: 0;
-}
-}
-
-.pildoras span:nth-child(1) {
-    left: 10%;
-    animation-duration: 12s;
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
 }
 
-.pildoras span:nth-child(2) {
-    left: 30%;
-    width: 20px;
-    height: 40px;
-    animation-duration: 8s;
-}
+/* Variaciones de posición y velocidad para las píldoras */
+.pildoras span:nth-child(1) { left: 10%; animation-duration: 12s; }
+.pildoras span:nth-child(2) { left: 30%; width: 20px; height: 40px; animation-duration: 8s; }
+.pildoras span:nth-child(3) { left: 50%; animation-duration: 15s; }
+.pildoras span:nth-child(4) { left: 70%; width: 25px; height: 50px; animation-duration: 10s; }
+.pildoras span:nth-child(5) { left: 90%; animation-duration: 18s; }
 
-.pildoras span:nth-child(3) {
-    left: 50%;
-    animation-duration: 15s;
-}
-
-.pildoras span:nth-child(4) {
-    left: 70%;
-    width: 25px;
-    height: 50px;
-    animation-duration: 10s;
-}
-
-.pildoras span:nth-child(5) {
-    left: 90%;
-    animation-duration: 18s;
-}
-
-
-header img {
-    width: 80px;
-}
-
-header h1 {
-    font-size: 1.8rem;
-}
-
-    header p {
-    font-size: 0.9rem;
-    color: #666;
-}
-
+/* --- AJUSTES DE CABECERA Y BODY --- */
+header img { width: 80px; }
+header h1 { font-size: 1.8rem; }
+header p { font-size: 0.9rem; color: #666; }
 
 body {
     margin: 0;
@@ -405,10 +356,10 @@ body {
     font-family: var(--fuente-principal);
     background: var(--color-fondo);
     color: var(--color-texto);
-    -webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased; /* Suaviza las fuentes en navegadores WebKit */
+    overflow-x: hidden; /* Evita el scroll horizontal */
 }
 
-/* CABECERA: logo */
 .cabecera {
     display: flex;
     align-items: center;
@@ -418,29 +369,22 @@ body {
     box-shadow: 0 6px 18px rgba(0,0,0,0.12);
 }
 
-
-/* --- SLIDER IMPACTO TOTAL (4 IMÁGENES) --- */
+/* --- SLIDER DE IMÁGENES (4 FOTOS) --- */
 .slider-container.full-width {
     width: 100vw; 
-    /* Fuerza el ancho total aunque esté dentro de un contenedor con márgenes */
-    margin-left: calc(-50vw + 50%); 
-    
-    /* ALTURA AUMENTADA: Ocupa el 85% de la altura de la pantalla */
+    margin-left: calc(-50vw + 50%); /* Centra el slider ocupando todo el ancho de pantalla */
     height: 85vh; 
     min-height: 550px; 
-    
     overflow: hidden;
     position: relative;
     z-index: 5;
-    background-color: #000; /* Fondo negro por si la imagen tarda en cargar */
+    background-color: #000;
 }
 
 .slider-track {
     display: flex;
-    /* IMPORTANTE: 400% porque ahora tienes 4 imágenes */
-    width: 400%; 
+    width: 400%; /* Espacio para 4 imágenes de 100% cada una */
     height: 100%;
-    /* 20 segundos total: 5 segundos para cada una de las 4 imágenes */
     animation: scrollSlider4 20s infinite ease-in-out;
 }
 
@@ -452,40 +396,26 @@ body {
 .slide img {
     width: 100%;
     height: 100%;
-    /* 'cover' para que no queden huecos blancos, 'top' para no cortar cabezas si hay personas */
     object-fit: cover; 
     object-position: center; 
 }
 
-/* Animación sincronizada para 4 imágenes */
+/* Lógica de la animación del slider */
 @keyframes scrollSlider4 {
-    /* Imagen 1 */
-    0%, 20% { transform: translateX(0); }             
-    /* Transición 1 a 2 */
-    25%, 45% { transform: translateX(-25%); }         
-    /* Transición 2 a 3 */
-    50%, 70% { transform: translateX(-50%); }         
-    /* Transición 3 a 4 */
-    75%, 95% { transform: translateX(-75%); }         
-    /* Regreso al inicio */
-    100% { transform: translateX(0); }                
+    0%, 20% { transform: translateX(0); }             /* Imagen 1 */
+    25%, 45% { transform: translateX(-25%); }         /* Imagen 2 */
+    50%, 70% { transform: translateX(-50%); }         /* Imagen 3 */
+    75%, 95% { transform: translateX(-75%); }         /* Imagen 4 */
+    100% { transform: translateX(0); }                /* Regreso */
 }
 
-/* Ajuste preventivo para evitar scroll horizontal en la web */
-body {
-    overflow-x: hidden;
-}
-
-
-
-
-/* TÍTULO CENTRADO*/
-.titulo-centro {
+/* --- SECCIÓN DE PRODUCTOS (MINIATURAS) --- */
+.titulo-centro, .Titulo-Centro {
     text-align: center;
     margin: 32px 0;
 }
 
-.titulo-centro h2 {
+.titulo-centro h2, .Titulo-Centro h2 {
     display: inline-block;
     padding: 8px 16px;
     border: 3px solid #000;
@@ -493,20 +423,6 @@ body {
     font-weight: 700;
 }
 
-.Titulo-Centro {
-    text-align: center;
-    margin: 32px 0;
-}
-
-.Titulo-Centro h2 {
-    display: inline-block;
-    padding: 8px 16px;
-    border: 3px solid #000;
-    background: #dedede;
-    font-weight: 700;
-}
-
-/* FILA DE MINIATURAS */
 .fila-miniaturas {
     display: flex;
     justify-content: center;
@@ -521,35 +437,24 @@ body {
     padding: 15px;
     text-align: center;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3 ease;
+    transition: transform 0.3s ease;
     margin-bottom: 40px;
 }
 
 .miniatura img {
     width: 100%;
     border-radius: 12px;
-
 }
 
-.miniatura :hover {
+.miniatura:hover {
     transform: translateY(-6px);
 }
-.miniatura h3 {
-    font-size: 16px;
-    margin: 10px 0 5px;
-}
-.miniatura p {
-    font-size: 16px;
-    color: #555;
-}
 
-.miniatura span {
-    font-weight: bold;
-    font-size: 16px;
-    display: block;
-    margin-top: 5px;
-}
+.miniatura h3 { font-size: 16px; margin: 10px 0 5px; }
+.miniatura p { font-size: 16px; color: #555; }
+.miniatura span { font-weight: bold; font-size: 16px; display: block; margin-top: 5px; }
 
+/* Botones de acción en productos */
 .btn-agregar {
     background-color: #000;
     color: #f5f5f5;
@@ -573,12 +478,13 @@ body {
     color: red;
 }
 
+/* --- SECCIONES INFORMATIVAS --- */
 .marcas {
     text-align: center;
     width: 90%;
     max-width: 1000px;
-    margin: 20px auto; /* centra automáticamente */
-    background: #1e293b; /* azul oscuro elegante */
+    margin: 20px auto;
+    background: #1e293b; 
     color: #ffffff;
     padding: 25px;
     border-radius: 16px;
@@ -588,8 +494,6 @@ body {
     border: 1px solid rgba(255,255,255,0.05);
 }
 
-
-
 .historia-negra {
     background: #000;
     color: #fff;
@@ -597,21 +501,10 @@ body {
     text-align: center;
 }
 
-.historia-negra h2 {
-    font-size: 28px;
-    margin-bottom: 30px;
-    letter-spacing: 1px;
-}
+.historia-negra h2 { font-size: 28px; margin-bottom: 30px; letter-spacing: 1px; }
+.historia-negra p { max-width: 900px; margin: 0 auto 18px; line-height: 1.8; font-size: 16px; color: #e0e0e0; }
 
-.historia-negra p {
-    max-width: 900px;
-    margin: 0 auto 18px;
-    line-height: 1.8;
-    font-size: 16px;
-    color: #e0e0e0;
-}
-
-
+/* --- FOOTER --- */
 footer {
     background: #111;
     color: #fff;
@@ -620,146 +513,55 @@ footer {
     font-size: 14px;
 }
 
-footer span {
-    display: block;
-    margin: 6px 0;
-    color: #ccc;
-}
-
-.btn-agregar {
-    background-color: #000;
-    color: #f5f5f5;
-    border-radius: 4px;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 3px;
-    position: relative;
-    z-index: 10;
-    cursor: pointer;
-}
-
-.btn-eliminar {
-    font-size: 20px;
-    cursor: pointer;
-    margin-left: 15px;
-    transition: 0.2s;
-}
-
-.btn-eliminar:hover {
-    transform: scale(1.2);
-    color: red;
-}
+footer span { display: block; margin: 6px 0; color: #ccc; }
 
 footer.main-footer {
     position: relative !important;
-    z-index: 9999 !important; /* Más alto que las píldoras y el fondo */
+    z-index: 9999 !important;
     background: #111;
-    pointer-events: auto !important; /* Obliga a que los clics funcionen aquí */
+    pointer-events: auto !important;
 }
 
 footer.main-footer a.btn {
     cursor: pointer !important;
     position: relative;
-    z-index: 10000; /* Un poco más que el footer mismo */
+    z-index: 10000;
 }
 
-/* UTILIDADES*/
+/* --- UTILIDADES --- */
 .u-text-center { text-align: center; }
 .u-hidden { display: none; }
 
-/*  HISTORIA Y FUNDACIÓN  */
-.historia {
-    margin: 50px auto;
-    width: 90%;
-    max-width: 1100px;
-}
+/* --- HISTORIA Y FUNDACIÓN --- */
+.historia { margin: 50px auto; width: 90%; max-width: 1100px; }
+.historia-titulo { text-align: center; font-size: 26px; margin-bottom: 20px; font-weight: bold; }
+.historia-contenido { background: #cfdde7; border: 2px solid #5b7c99; border-radius: 10px; padding: 20px; }
+.historia-contenido h3 { font-size: 22px; margin-bottom: 10px; }
+.historia-contenido p { line-height: 1.6; margin-bottom: 15px; }
 
-.historia-titulo {
-    text-align: center;
-    font-size: 26px;
-    margin-bottom: 20px;
-    font-weight: bold;
-}
+/* --- CAJAS INFERIORES DE INFO --- */
+.info-cajas { display: flex; justify-content: space-between; gap: 20px; margin-top: 25px; flex-wrap: wrap; }
+.caja { flex: 1; min-width: 250px; border: 2px solid #333; border-radius: 6px; padding: 15px; background: #fff; }
+.caja h4 { margin-bottom: 10px; font-size: 18px; }
+.caja p { font-size: 14px; margin: 4px 0; }
 
-.historia-contenido {
-    background: #cfdde7;
-    border: 2px solid #5b7c99;
-    border-radius: 10px;
-    padding: 20px;
-}
-
-.historia-contenido h3 {
-    font-size: 22px;
-    margin-bottom: 10px;
-}
-
-.historia-contenido p {
-    line-height: 1.6;
-    margin-bottom: 15px;
-}
-
-
-
-/* CAJAS INFERIORES */
-.info-cajas {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    margin-top: 25px;
-    flex-wrap: wrap;
-}
-
-.caja {
-    flex: 1;
-    min-width: 250px;
-    border: 2px solid #333;
-    border-radius: 6px;
-    padding: 15px;
-    background: #fff;
-}
-
-.caja h4 {
-    margin-bottom: 10px;
-    font-size: 18px;
-}
-
-.caja p {
-    font-size: 14px;
-    margin: 4px 0;
-}
-
-
-/* --- CONTENEDORES LATERALES (TIPO PANEL) --- */
+/* --- PANELES LATERALES DESLIZANTES --- */
 .contenedor, .contenedor2 {
     position: fixed;
     top: 50%;
-    width: 300px; /* Ancho fijo del panel */
+    width: 300px;
     z-index: 9999;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    cursor: default;
 }
 
-/* Panel Izquierdo: Escondido a la izquierda */
-.contenedor {
-    left: -300px; /* Se esconde exactamente su ancho */
-}
+.contenedor { left: -300px; } /* Oculto a la izquierda */
+.contenedor2 { right: -300px; } /* Oculto a la derecha */
 
-/* Panel Derecho: Escondido a la derecha */
-.contenedor2 {
-    right: -300px; /* Se esconde exactamente su ancho */
-}
+.contenedor:hover { left: 0; }
+.contenedor2:hover { right: 0; }
 
-/* --- ACTIVACIÓN AL PASAR EL MOUSE (ABRIR) --- */
-.contenedor:hover {
-    left: 0; /* Entra totalmente */
-}
-
-.contenedor2:hover {
-    right: 0; /* Entra totalmente */
-}
-
-/* --- ESTILO DEL ASIDE DENTRO DEL PANEL --- */
 aside {
-    background-color: #1a1a1a; /* Fondo oscuro sólido */
+    background-color: #1a1a1a;
     color: white;
     padding: 25px;
     height: auto;
@@ -767,63 +569,44 @@ aside {
     box-shadow: 0 0 20px rgba(0,0,0,0.7);
 }
 
-.contenedor aside { border-radius: 0 15px 15px 0; } /* Redondeado derecha */
-.contenedor2 aside { border-radius: 15px 0 0 15px; } /* Redondeado izquierda */
+.contenedor aside { border-radius: 0 15px 15px 0; }
+.contenedor2 aside { border-radius: 15px 0 0 15px; }
 
-/* --- LAS PESTAÑAS (LO QUE SE VE CUANDO ESTÁ CERRADO) --- */
+/* Pestañas indicadoras (Iconos flotantes) */
 .contenedor::after, .contenedor2::after {
     position: absolute;
     top: 0;
     width: 45px;
     height: 50px;
-    background: #00d4ff; /* Color vibrante */
+    background: #00d4ff;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 20px;
     cursor: pointer;
-    box-shadow: 2px 0 10px rgba(0,0,0,0.5);
 }
 
-/* Pestaña Izquierda */
-.contenedor::after {
-    content: "❓";
-    right: -45px; /* Se queda pegada al borde derecho del panel oculto */
-    border-radius: 0 10px 10px 0;
-}
+.contenedor::after { content: "❓"; right: -45px; border-radius: 0 10px 10px 0; }
+.contenedor2::after { content: "📍"; left: -45px; border-radius: 10px 0 0 10px; }
 
-/* Pestaña Derecha */
-.contenedor2::after {
-    content: "📍";
-    left: -45px; /* Se queda pegada al borde izquierdo del panel oculto */
-    border-radius: 10px 0 0 10px;
-}
+iframe { pointer-events: auto !important; }
 
-/* Asegúrate de que el iframe no herede restricciones */
-iframe {
-    pointer-events: auto !important;
-}
-
-
-
-/* --- MODAL STYLE --- */
+/* --- MODAL DEL CARRITO Y SELECCIÓN --- */
 .modal-estilo {
-    display: none; /* Se activa con .modal-active */
+    display: none; 
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(0, 0, 0, 0.9); /* Fondo ultra oscuro */
+    background: rgba(0, 0, 0, 0.9);
     z-index: 10000;
     align-items: center;
     justify-content: center;
     padding: 20px;
 }
 
-.modal-estilo.modal-active {
-    display: flex;
-}
+.modal-estilo.modal-active { display: flex; }
 
 .modal-contenido {
-    background: #111827; /* Azul muy oscuro para combinar con tu .fondo */
+    background: #111827;
     color: white;
     padding: 25px;
     border-radius: 20px;
@@ -847,9 +630,9 @@ iframe {
     height: 65px;
     object-fit: cover;
     border-radius: 10px;
-    border: 1px solid #333;
 }
 
+/* Botón de WhatsApp */
 .btn-wssp {
     background: #25d366;
     color: #000 !important;
@@ -862,10 +645,7 @@ iframe {
     transition: 0.3s;
 }
 
-.btn-wssp:hover {
-    background: #1ebe57;
-    transform: scale(1.02);
-}
+.btn-wssp:hover { background: #1ebe57; transform: scale(1.02); }
 
 .btn-cerrar {
     background: transparent;
@@ -877,10 +657,7 @@ iframe {
     text-decoration: underline;
 }
 
-
-.cart-count { transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
-/* Y en JS podrías hacer que el contador escale un poco */
-
+/* Efectos visuales de items en el modal */
 .img-grande {
     width: 100%;
     max-height: 200px;
@@ -903,7 +680,6 @@ iframe {
     padding: 8px 12px;
     border-radius: 8px;
     cursor: pointer;
-    transition: 0.3s;
 }
 
 .btn-talla.active {
@@ -913,17 +689,11 @@ iframe {
     font-weight: bold;
 }
 
-.selector-talla p {
-    font-size: 14px;
-    color: #ccc;
-}
-
-/* Centrar el botón de confirmación en el modal */
 #confirmarAgregar {
-    display: block;      /* Lo convertimos en bloque para usar margin auto */
-    margin: 20px auto;   /* 20px arriba/abajo y centrado a los lados */
-    width: 80%;          /* Le damos un ancho definido para que no ocupe todo */
-    max-width: 250px;    /* Pero que no se vea gigante en pantallas grandes */
+    display: block;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 250px;
     border: none;
     cursor: pointer;
 }
@@ -935,7 +705,7 @@ iframe {
     color: #ffffff;
     border: 1px solid rgba(255, 255, 255, 0.4);
     padding: 12px 25px;
-    border-radius: 50px; /* Bordes redondeados modernos */
+    border-radius: 50px;
     text-decoration: none;
     font-weight: bold;
     font-size: 14px;
@@ -950,5 +720,3 @@ iframe {
     transform: scale(1.05);
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
 }
-
-
