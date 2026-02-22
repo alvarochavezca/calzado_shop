@@ -697,11 +697,7 @@ footer.main-footer a.btn {
     margin-bottom: 15px;
 }
 
-.historia-contenido img {
-    width: 100%;
-    border-radius: 8px;
-    margin-top: 10px;
-}
+
 
 /* CAJAS INFERIORES */
 .info-cajas {
@@ -730,6 +726,7 @@ footer.main-footer a.btn {
     font-size: 14px;
     margin: 4px 0;
 }
+
 
 /* --- CONTENEDORES LATERALES (TIPO PANEL) --- */
 .contenedor, .contenedor2 {
@@ -806,6 +803,8 @@ aside {
 iframe {
     pointer-events: auto !important;
 }
+
+
 
 /* --- MODAL STYLE --- */
 .modal-estilo {
@@ -951,3 +950,5 @@ iframe {
     transform: scale(1.05);
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
 }
+
+
