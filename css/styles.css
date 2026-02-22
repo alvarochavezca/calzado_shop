@@ -95,6 +95,7 @@
     }
 }
 
+
 /* =========================================================
    CABECERA SUPERIOR (LOGO Y ESLOGAN)
    ========================================================= */
@@ -457,10 +458,7 @@ body {
     background: #dedede;
     font-weight: 700;
 }
-
-/* =========================================================
-   TARJETAS DE PRODUCTO (MINIATURAS)
-   ========================================================= */
+/* --- GRILLA DE PRODUCTOS --- */
 .fila-miniaturas {
     display: grid;
     grid-template-columns: repeat(4, 250px);
@@ -492,6 +490,7 @@ body {
 .miniatura h3 { font-size: 16px; margin: 10px 0 5px; }
 .miniatura p { font-size: 16px; color: #555; }
 .miniatura span { font-weight: bold; font-size: 16px; display: block; margin-top: 5px; }
+
 /* --- BOTONES --- */
 .btn-agregar {
     background-color: #000;
@@ -570,11 +569,24 @@ footer.main-footer a.btn {
     z-index: 10000; 
 }
 
-/* =========================================================
-   UTILIDADES ADICIONALES
-   ========================================================= */
+/* ==========================================================================
+   UTILIDADES Y QUERIES DE GRID
+   ========================================================================== */
 .u-text-center { text-align: center; }
 .u-hidden { display: none; }
+
+/* Ajuste de columnas de productos según ancho de pantalla */
+@media (max-width: 1100px) {
+    .fila-miniaturas { grid-template-columns: repeat(3, 250px); }
+}
+
+@media (max-width: 850px) {
+    .fila-miniaturas { grid-template-columns: repeat(2, 250px); }
+}
+
+@media (max-width: 550px) {
+    .fila-miniaturas { grid-template-columns: repeat(1, 250px); }
+}
 
 /* Sección historia interna */
 .historia {

@@ -483,6 +483,18 @@ body {
     color: red;
 }
 
+/* --- RESPONSIVE DE GRILLA --- */
+@media (max-width: 1100px) {
+    .fila-miniaturas { grid-template-columns: repeat(3, 250px); }
+}
+
+@media (max-width: 850px) {
+    .fila-miniaturas { grid-template-columns: repeat(2, 250px); }
+}
+
+@media (max-width: 550px) {
+    .fila-miniaturas { grid-template-columns: repeat(1, 250px); }
+}
 
 /* --- SECCIONES INFORMATIVAS --- */
 .marcas {
