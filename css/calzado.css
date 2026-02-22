@@ -535,7 +535,7 @@ footer span {
 
 .contenedor {
     position: absolute;
-    left: 5px;
+    left: 20px;
     top: 750px; /* ajusta según altura real */
 }
 aside {
@@ -553,7 +553,7 @@ aside {
 
 .contenedor2 {
     position: absolute;
-    right: -35px;
+    right: 20px;
     top: 750px; /* ajusta según altura real */
     float: right;
 }
