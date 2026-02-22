@@ -7,8 +7,7 @@
 
     
     <link rel="stylesheet" href="../css/styles.css">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+   
 
       
 </head>
@@ -55,14 +54,18 @@
                         <li><a href="../paginas/proximamente.html" target="_blank">PRÓXIMOS LANZAMIENTOS</a></li>
                     </article>
                     <article>
+<<<<<<< HEAD
                         <li><a href="../paginas/tendencias.html">TENDENCIAS</a></li>
+=======
+                        <li><a href="../paginas/tendencias.html" target="_blank">TENDENCIAS</a></li>
+>>>>>>> 7f4c37fb17f53bf5641ca71809e93bdd7424a0a4
                     </article>
                 </ul>
 
                 <div class="search-cart-container">
                     <div class="search-box">
-                        <input type="text" placeholder="Buscar...">
-                        <button>🔍</button>
+                        <input type="text" id="buscador" placeholder="Buscar...">
+                        <button id="btnBuscar">🔍</button>
                     </div>
                     
                     <div class="cart-icon">🛒
@@ -88,14 +91,13 @@
         <!-- Contenido principal -->
         <main class="principal">
             <!-- Sección destacada: dos imágenes grandes -->
-            <section class="hero">
-                <div class="hero-grande">
-                    <img src="../imagenes/tabas1.jpeg" alt="Zapatillas destacadas">
-                </div>
-
-                <div class="hero-chica">
-                    <img src="../imagenes/tabas2.jpeg" alt="Zapatillas urbanas">
-                </div>
+            <section class="slider-container full-width">
+            <div class="slider-track">
+                <div class="slide"><img src="../imagenes/slider1.jpg" alt="Slide 1"></div>
+                <div class="slide"><img src="../imagenes/slider2.jpg" alt="Slide 2"></div>
+                <div class="slide"><img src="../imagenes/slider3.jpg" alt="Slide 3"></div>
+                <div class="slide"><img src="../imagenes/slider4.jpg" alt="Slide 4"></div>
+            </div>
             </section>
 
             <!-- Título centrado grande -->
@@ -108,35 +110,30 @@
                 <div class="miniatura"><img src="../imagenes/tabas3.jpeg" alt="">
                     <h3>Zapatillas Adidas</h3>
                     <p>Running</p>
-                    <span>S/160.00</span>
+                    <span>S/90.00</span>
+                    <button class="btn-agregar"><span>Agregar al carrito 🛒</span></button>
                 </div>
                 <div class="miniatura"><img src="../imagenes/tabas4.jpeg" alt="">
                     <h3>Zapatillas Adidas</h3>
                     <p>Urbano</p>
-                    <span>S/180.00</span>
+                    <span>S/80.00</span>
+                    <button class="btn-agregar"><span>Agregar al carrito 🛒</span></button>
                 </div>
                 <div class="miniatura"><img src="../imagenes/tabas5.jpeg" alt="">
                     <H3>Zapatillas Adidas</H3>
                     <p>Urbano</p>
-                    <span>S/190.00</span>
+                    <span>S/80.00</span>
+                    <button class="btn-agregar"><span>Agregar al carrito 🛒</span></button>
                 </div>
                 <div class="miniatura"><img src="../imagenes/tabas6.jpeg" alt="">
                     <h3>Zapatillas Adidas</h3>
                     <p>Running</p>
-                    <span>S/130.00</span>
+                    <span>S/70.00</span>
+                    <button class="btn-agregar"><span>Agregar al carrito 🛒</span></button>
                 </div>
             </section>
 
-            <div class="contenedor">
-                <aside> 
-                    <h2>¿Por qué elegirnos?</h2>
-                        <ul>
-                            <li>✔ Garantía de calidad</li>
-                            <li>✔ Modelos originales</li>
-                            <li>✔ Entrega rápida</li>
-                        </ul>
-                </aside>
-            </div>
+            
 
             <div class="contenedor">
                 <aside> 
@@ -175,25 +172,29 @@
         </div>
             
         <section class="fila-miniaturas">
-            <div class="miniatura"><img src="../imagenes/tabas6.jpeg" alt="">
+            <div class="miniatura"><img src="../imagenes/tabas11.jpg" alt="">
                 <h3>Zapatillas Adidas</h3>
                 <p>Running</p>
-                <span>S/160.00</span>
+                <span>S/60.00</span>
+                <button class="btn-agregar"><span>Agregar al carrito 🛒</span></button>
             </div>
             <div class="miniatura"><img src="../imagenes/tabas8.jpeg" alt="">
                 <h3>Zapatillas Adidas</h3>
                 <p>Running</p>
-                <span>S/130.00</span>
+                <span>S/70.00</span>
+                <button class="btn-agregar"><span>Agregar al carrito 🛒</span></button>
             </div>
             <div class="miniatura"><img src="../imagenes/tabas9.png" alt="">
                 <h3>Zapatillas Puma</h3>
                 <p>Urbano</p>
-                <span>S/140.00</span>
+                <span>S/80.00</span>
+                <button class="btn-agregar"><span>Agregar al carrito 🛒</span></button>
             </div>
             <div class="miniatura"><img src="../imagenes/tabas10.png" alt="">
                 <h3>Zapatillas DC</h3>
                 <p>Skeater Urbano</p>
-                <span>S/170.00</span>
+                <span>S/70.00</span>
+                <button class="btn-agregar"><span>Agregar al carrito 🛒</span></button>
             </div>
         </section>
 
@@ -220,6 +221,7 @@
             </p>
         </section>
 
+<<<<<<< HEAD
         <footer>
             <span>©2026 Información sobre Calzado Shop</span>
             <span>Todos los derechos reservados</span>
@@ -229,46 +231,59 @@
 
         </footer>
 
+=======
+        <footer class="main-footer mt-5 py-4 text-center" style="border-top: 1px solid rgba(255,255,255,0.1);">
+    <div class="container-fluid">
+        <p class="mb-1 text-white-50 small">©2026 Información sobre Calzado Shop - Todos los derechos reservados</p>
+        
+        <a href="../paginas/reclamaciones.html" target="_blank" class="btn btn-outline-light btn-sm">
+       📖 LIBRO DE RECLAMACIONES
+        </a>
+    </div>
+</footer>
+>>>>>>> 7f4c37fb17f53bf5641ca71809e93bdd7424a0a4
         <div id="miModalCarrito" class="modal-estilo">
-            <div class="modal-contenido">
-                <h3>Tu Pedido</h3>
-                <div id="listaProductos"></div>
-                <div class="modal-footer">
-                    <a id="btnWhatsapp" target="_blank" class="btn-wssp">Solicitar por WhatsApp</a>
-                    <button onclick="cerrarModal()" class="btn-cerrar">Seguir comprando</button>
-                </div>
-            </div>
-        </div>
-
-        <div id="modalProducto" class="modal-estilo">
-            <div class="modal-contenido">
-                <img id="modalImg" src="" class="img-grande">
-                <h3 id="modalNombre">Nombre</h3>
-                <p id="modalPrecio">S/0.00</p>
-            
-                <div class="selector-talla">
-                    <p>Selecciona tu talla:</p>
-                    <div class="tallas-flex">
-                        <button class="btn-talla">35</button>
-                        <button class="btn-talla">36</button>
-                        <button class="btn-talla">37</button>
-                        <button class="btn-talla">38</button>
-                        <button class="btn-talla">39</button>
-                        <button class="btn-talla">40</button>
-                        <button class="btn-talla">41</button>
-                        <button class="btn-talla">42</button>
-                        <button class="btn-talla">43</button>
-                        <button class="btn-talla">44</button>
-                    </div>
-                </div>
-
-                <button id="confirmarAgregar" class="btn-wssp" style="background: #00d4ff; color: #fff;">
-                    Añadir al carrito 🛒
-                </button>
-                <button onclick="cerrarModalTalla()" class="btn-cerrar">Cancelar</button>
+        <div class="modal-contenido">
+            <h3>Tu Pedido</h3>
+            <div id="listaProductos"></div>
+            <div class="modal-footer">
+                <a id="btnWhatsapp" target="_blank" class="btn-wssp">Solicitar por WhatsApp</a>
+                <button onclick="cerrarModal()" class="btn-cerrar">Seguir comprando</button>
             </div>
         </div>
     </div>
+
+    <div id="modalProducto" class="modal-estilo">
+        <div class="modal-contenido">
+            <img id="modalImg" src="" class="img-grande">
+            <h3 id="modalNombre">Nombre</h3>
+            <p id="modalPrecio">S/0.00</p>
+        
+            <div class="selector-talla">
+                <p>Selecciona tu talla:</p>
+                <div class="tallas-flex">
+                    <button class="btn-talla">35</button>
+                    <button class="btn-talla">36</button>
+                    <button class="btn-talla">37</button>
+                    <button class="btn-talla">38</button>
+                    <button class="btn-talla">39</button>
+                    <button class="btn-talla">40</button>
+                    <button class="btn-talla">41</button>
+                    <button class="btn-talla">42</button>
+                    <button class="btn-talla">43</button>
+                    <button class="btn-talla">44</button>
+                </div>
+            </div>
+
+            <button id="confirmarAgregar" class="btn-wssp" style="background: #00d4ff; color: #fff;">
+                Añadir al carrito 🛒
+            </button>
+            <button onclick="cerrarModalTalla()" class="btn-cerrar">Cancelar</button>
+        </div>
+    </div>
+
+
+                 
 
     <script src="../Java/Proyecto-calzado.js"></script>    
 
