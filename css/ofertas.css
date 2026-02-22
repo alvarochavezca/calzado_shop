@@ -440,6 +440,31 @@ header p {
     position: relative;
 }
 
+/* --- RESPONSIVE ADICIONAL PARA EL GRID --- */
+
+/* Pantallas Medianas (Laptops pequeñas / Tablets grandes) -> 3 imágenes */
+@media (max-width: 1100px) {
+    .fila-miniaturas {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Tablets (Medianas) -> 2 imágenes */
+@media (max-width: 850px) {
+    .fila-miniaturas {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+/* Celulares (Pequeños) -> 1 imagen (o 2 si prefieres que sean muy pequeñas) */
+@media (max-width: 550px) {
+    .fila-miniaturas {
+        grid-template-columns: repeat(1, 1fr); /* Cambia a 2 si quieres dos fotos por fila */
+        max-width: 320px; /* Evita que la tarjeta sea gigante en el celular */
+    }
+}
+
 /* Texto tachado para precios antiguos */
 del {
   color: #e53935;
